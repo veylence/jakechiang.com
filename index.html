@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jake Chiang">
+
+    <title>Jake Chiang</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Hexagon -->
+    <link href="vendor/css-hexagon/hexagon.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Kanit:100" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+
+
+    <!--[if lt IE 9]>
+
+    <![endif]-->
+
+    <!--
+       Test if Internet Explorer is being used. If it is, and its
+       version is <9, jQuery 1.x is used. If it isn't, or IE version
+       9+ is in use, jQuery 2.x is loaded instead.
+       
+       In both cases jQuery is first attempted to be loaded from
+       Google's CDN. If, for some reason, it cannot be accessed,
+       it is loaded from this site's own copy.
+       
+       Additional note: The "| (!IE)" statement for loading jQuery
+       2.x isn't necessary, but cleaner.
+    -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- ******************************************************** -->
+    <!--[if lt IE 9]>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            if (!window.jQuery) {
+                document.write('<script src="js/jquery-1.12.4.min.js"><\/script>');
+            }   
+        </script>
+
+        <script src="vendor/html5shiv/html5shiv.min.js></script>
+        <script src="vendor/respond/respond.min.js"></script>
+        <![endif]-->
+
+    <!--[if gte IE 9] | (!IE)><!-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        if (!window.jQuery) {
+            document.write('<script src="js/jquery-2.2.4.min.js"><\/script>');
+        }
+    </script>
+    <!--<![endif]-->
+    <!-- ******************************************************** -->
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img id="logo" src="img/JC_v5_2.png" alt="JC Logo">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#links">Links</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header id="header">
+        <!-- TODO
+        <div id="grid-area"> </div>
+        <div id="grid-area-overlay"> </div>
+-->
+
+        <div class="container">
+            <div class="intro-text">
+                <span>Jake Chiang</span>
+
+                <!-- Row 1 -->
+                <div class="row text-center">
+                    <a class="page-scroll hexagon-button" href="#about">
+                        <div class="hexagon-md hexagon-primary hexagon-inline hexagon-hover">
+                            <div class="hexagon-md hexagon-default hexagon-inline hexagon-inner">
+                                <span class="fa-stack nav-icon">
+                                    <span class="fa fa-circle-o fa-stack-2x"></span>
+                                <span class="fa fa-info fa-stack-1x"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="page-scroll hexagon-button" href="#projects">
+                        <div class="hexagon-md hexagon-primary hexagon-inline hexagon-hover">
+                            <div class="hexagon-md hexagon-default hexagon-inline hexagon-inner">
+                                <span class="fa-stack nav-icon">
+                                <span class="fa fa-code fa-stack-1x fa-lg"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="page-scroll hexagon-button" href="#skills">
+                        <div class="hexagon-md hexagon-primary hexagon-inline hexagon-hover">
+                            <div class="hexagon-md hexagon-default hexagon-inline hexagon-inner">
+                                <span class="fa-stack nav-icon">
+                                <span class="fa fa-star fa-stack-2x"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="row text-center">
+                    <a class="page-scroll hexagon-button" href="#links">
+                        <div class="hexagon-md hexagon-primary hexagon-inline hexagon-hover">
+                            <div class="hexagon-md hexagon-default hexagon-inline hexagon-inner">
+                                <span class="fa-stack nav-icon">
+                                <span class="fa fa-list fa-stack-1x fa-lg"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="page-scroll hexagon-button" href="#contact">
+                        <div class="hexagon-md hexagon-primary hexagon-inline hexagon-hover">
+                            <div class="hexagon-md hexagon-default hexagon-inline hexagon-inner">
+                                <span class="fa-stack nav-icon">
+                                <span class="fa fa-envelope-o fa-stack-1x fa-lg"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About</h2>
+                    <img id="profile-img" src="img/profile.jpg" alt="Profile picture">
+                </div>
+            </div>
+
+            <div>
+                <p>
+                    Current undergraduate at the <a href="https://www.washington.edu/">University of Washington, Seattle</a>. I am I am currently a TA for the <a href="http://www.cs.washington.edu/143">CSE 143</a> introductory computer science class at UW.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis auctor augue, id tincidunt arcu gravida ullamcorper. Curabitur sit amet metus dui. Pellentesque condimentum consequat massa, nec hendrerit augue dictum sit amet. Nullam malesuada nunc eget fringilla ultricies. Fusce at porta magna. In tortor ligula, posuere eget vulputate nec, tristique a eros. Aliquam id sagittis purus. Vestibulum ligula lorem, dapibus eu augue vel, suscipit finibus lectus. Maecenas maximus sagittis dolor luctus lacinia. Vestibulum mattis sagittis magna, pretium eleifend lorem finibus ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget semper orci. Nunc a mi vel metus tempor egestas at nec quam. Quisque sit amet metus at quam ultrices tristique ut quis diam. Quisque ac euismod est.
+                </p>
+                <p>
+                    Fusce mattis orci id elit hendrerit auctor. Maecenas quis pellentesque nibh. Sed volutpat nisi quis eros faucibus iaculis. Nulla a tempor nibh, non ornare lectus. Nulla scelerisque est eget mi pulvinar vehicula. Mauris ornare feugiat urna eget commodo. Nunc lobortis enim iaculis lorem scelerisque, et mollis ligula viverra. Vestibulum mauris eros, tincidunt tincidunt odio eu, blandit mattis tortor. In hac habitasse platea dictumst. Pellentesque sit amet pretium tellus. Donec sagittis, elit eget iaculis consectetur, ipsum mi hendrerit nisl, nec gravida velit mi ac enim.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Projects</h2>
+                    <h3 class="section-subheading text-muted">Click to expand and explore.</h3>
+                </div>
+            </div>
+
+            <!-- Row 1 -->
+            <div id="gallery-buttons" class="row text-center">
+                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="0">
+                        <img data-toggle="tooltip" data-placement="top" title="Project1" class="gallery-thumbnail img-circle" src="img/projects/minesweeper.png" alt="TODO">
+                    </a>
+                </div>
+                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="1">
+                        <img data-toggle="tooltip" data-placement="top" title="Project2" class="gallery-thumbnail img-circle" src="img/projects/dragoncurve.png" alt="TODO">
+                    </a>
+                </div>
+                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                    <a href="#projects-anchor" class="page-scrol-mobilel gallery-button" data-gallery-button-id="2">
+                        <img data-toggle="tooltip" data-placement="top" title="Project3" class="gallery-thumbnail img-circle" src="img/projects/perspective.png" alt="TODO">
+                    </a>
+                </div>
+                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="3">
+                        <img data-toggle="tooltip" data-placement="top" title="Project4" class="gallery-thumbnail img-circle" src="img/projects/tnb.png" alt="TODO">
+                    </a>
+                </div>
+                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="4">
+                        <img data-toggle="tooltip" data-placement="top" title="Project5" class="gallery-thumbnail img-circle" src="img/projects/critters.png" alt="TODO">
+                    </a>
+                </div>
+                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="5">
+                        <img data-toggle="tooltip" data-placement="top" title="Project6" class="gallery-thumbnail img-circle" src="img/projects/riemann.png" alt="TODO">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location the page scrolls to when expanding a project -->
+    <div id="projects-anchor"></div>
+
+    <!-- Project 1 -->
+    <div class="gallery-section" data-gallery-id="0" data-open="false">
+        <div class="center-block project-images">
+            <img class="gallery-main-image img-responsive" src="https://placehold.it/500x500" alt="#TODO">
+            <div>
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+            </div>
+        </div>
+
+        <div class="gallery-project-details">
+            <h2 class="section-heading">Hello World</h2>
+            <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dolor erat, nec feugiat est rhoncus vel. Maecenas sed quam sapien. Fusce nec metus sapien. Curabitur enim tellus, facilisis et sagittis quis, placerat eget sapien. Etiam urna dolor, commodo in congue sed, imperdiet vel tellus. Sed quis urna vitae felis efficitur imperdiet id at turpis. Cras nec tellus mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas lacinia, odio vel laoreet placerat, ligula tortor luctus dui, non scelerisque sapien nibh at ligula.
+            </p>
+            <p class="text-muted">
+                In vehicula pharetra laoreet. Donec interdum ex quis tincidunt sagittis. Nunc eu ullamcorper nisl. Donec eget euismod felis, aliquet maximus purus. Fusce non nisi porta, varius purus sit amet, venenatis odio. Sed nec condimentum quam, sit amet mattis neque. Vivamus non tempor neque. Morbi vitae fringilla lectus. Praesent vitae turpis at nisl viverra cursus non et orci. Integer at scelerisque est. Ut tristique nisl ut venenatis varius. Suspendisse ac porttitor dui. Nunc orci sapien, malesuada eu ultricies ut, rutrum et mi. Fusce cursus finibus tempor.
+            </p>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="gallery-section" data-gallery-id="1" data-open="false">
+        <div class="center-block project-images">
+            <img class="gallery-main-image img-responsive" src="https://placehold.it/500x500" alt="#TODO">
+            <div>
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+            </div>
+        </div>
+
+        <div class="gallery-project-details">
+            <h2 class="section-heading">Hello World</h2>
+            <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dolor erat, nec feugiat est rhoncus vel. Maecenas sed quam sapien. Fusce nec metus sapien. Curabitur enim tellus, facilisis et sagittis quis, placerat eget sapien. Etiam urna dolor, commodo in congue sed, imperdiet vel tellus. Sed quis urna vitae felis efficitur imperdiet id at turpis. Cras nec tellus mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas lacinia, odio vel laoreet placerat, ligula tortor luctus dui, non scelerisque sapien nibh at ligula.
+            </p>
+            <p class="text-muted">
+                In vehicula pharetra laoreet. Donec interdum ex quis tincidunt sagittis. Nunc eu ullamcorper nisl. Donec eget euismod felis, aliquet maximus purus. Fusce non nisi porta, varius purus sit amet, venenatis odio. Sed nec condimentum quam, sit amet mattis neque. Vivamus non tempor neque. Morbi vitae fringilla lectus. Praesent vitae turpis at nisl viverra cursus non et orci. Integer at scelerisque est. Ut tristique nisl ut venenatis varius. Suspendisse ac porttitor dui. Nunc orci sapien, malesuada eu ultricies ut, rutrum et mi. Fusce cursus finibus tempor.
+            </p>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="gallery-section" data-gallery-id="2" data-open="false">
+        <div class="center-block project-images">
+            <img class="gallery-main-image img-responsive" src="https://placehold.it/500x500" alt="#TODO">
+            <div>
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+            </div>
+        </div>
+
+        <div class="gallery-project-details">
+            <h2 class="section-heading">Hello World</h2>
+            <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dolor erat, nec feugiat est rhoncus vel. Maecenas sed quam sapien. Fusce nec metus sapien. Curabitur enim tellus, facilisis et sagittis quis, placerat eget sapien. Etiam urna dolor, commodo in congue sed, imperdiet vel tellus. Sed quis urna vitae felis efficitur imperdiet id at turpis. Cras nec tellus mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas lacinia, odio vel laoreet placerat, ligula tortor luctus dui, non scelerisque sapien nibh at ligula.
+            </p>
+            <p class="text-muted">
+                In vehicula pharetra laoreet. Donec interdum ex quis tincidunt sagittis. Nunc eu ullamcorper nisl. Donec eget euismod felis, aliquet maximus purus. Fusce non nisi porta, varius purus sit amet, venenatis odio. Sed nec condimentum quam, sit amet mattis neque. Vivamus non tempor neque. Morbi vitae fringilla lectus. Praesent vitae turpis at nisl viverra cursus non et orci. Integer at scelerisque est. Ut tristique nisl ut venenatis varius. Suspendisse ac porttitor dui. Nunc orci sapien, malesuada eu ultricies ut, rutrum et mi. Fusce cursus finibus tempor.
+            </p>
+        </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="gallery-section" data-gallery-id="3" data-open="false">
+        <div class="center-block project-images">
+            <img class="gallery-main-image img-responsive" src="https://placehold.it/500x500" alt="#TODO">
+            <div>
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+            </div>
+        </div>
+
+        <div class="gallery-project-details">
+            <h2 class="section-heading">Hello World</h2>
+            <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dolor erat, nec feugiat est rhoncus vel. Maecenas sed quam sapien. Fusce nec metus sapien. Curabitur enim tellus, facilisis et sagittis quis, placerat eget sapien. Etiam urna dolor, commodo in congue sed, imperdiet vel tellus. Sed quis urna vitae felis efficitur imperdiet id at turpis. Cras nec tellus mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas lacinia, odio vel laoreet placerat, ligula tortor luctus dui, non scelerisque sapien nibh at ligula.
+            </p>
+            <p class="text-muted">
+                In vehicula pharetra laoreet. Donec interdum ex quis tincidunt sagittis. Nunc eu ullamcorper nisl. Donec eget euismod felis, aliquet maximus purus. Fusce non nisi porta, varius purus sit amet, venenatis odio. Sed nec condimentum quam, sit amet mattis neque. Vivamus non tempor neque. Morbi vitae fringilla lectus. Praesent vitae turpis at nisl viverra cursus non et orci. Integer at scelerisque est. Ut tristique nisl ut venenatis varius. Suspendisse ac porttitor dui. Nunc orci sapien, malesuada eu ultricies ut, rutrum et mi. Fusce cursus finibus tempor.
+            </p>
+        </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="gallery-section" data-gallery-id="4" data-open="false">
+        <div class="center-block project-images">
+            <img class="gallery-main-image img-responsive" src="https://placehold.it/500x500" alt="#TODO">
+            <div>
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+            </div>
+        </div>
+
+        <div class="gallery-project-details">
+            <h2 class="section-heading">Hello World</h2>
+            <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dolor erat, nec feugiat est rhoncus vel. Maecenas sed quam sapien. Fusce nec metus sapien. Curabitur enim tellus, facilisis et sagittis quis, placerat eget sapien. Etiam urna dolor, commodo in congue sed, imperdiet vel tellus. Sed quis urna vitae felis efficitur imperdiet id at turpis. Cras nec tellus mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas lacinia, odio vel laoreet placerat, ligula tortor luctus dui, non scelerisque sapien nibh at ligula.
+            </p>
+            <p class="text-muted">
+                In vehicula pharetra laoreet. Donec interdum ex quis tincidunt sagittis. Nunc eu ullamcorper nisl. Donec eget euismod felis, aliquet maximus purus. Fusce non nisi porta, varius purus sit amet, venenatis odio. Sed nec condimentum quam, sit amet mattis neque. Vivamus non tempor neque. Morbi vitae fringilla lectus. Praesent vitae turpis at nisl viverra cursus non et orci. Integer at scelerisque est. Ut tristique nisl ut venenatis varius. Suspendisse ac porttitor dui. Nunc orci sapien, malesuada eu ultricies ut, rutrum et mi. Fusce cursus finibus tempor.
+            </p>
+        </div>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="gallery-section" data-gallery-id="5" data-open="false">
+        <div class="center-block project-images">
+            <img class="gallery-main-image img-responsive" src="https://placehold.it/500x500" alt="#TODO">
+            <div>
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+                <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
+            </div>
+        </div>
+
+        <div class="gallery-project-details">
+            <h2 class="section-heading">Hello World</h2>
+            <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dolor erat, nec feugiat est rhoncus vel. Maecenas sed quam sapien. Fusce nec metus sapien. Curabitur enim tellus, facilisis et sagittis quis, placerat eget sapien. Etiam urna dolor, commodo in congue sed, imperdiet vel tellus. Sed quis urna vitae felis efficitur imperdiet id at turpis. Cras nec tellus mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas lacinia, odio vel laoreet placerat, ligula tortor luctus dui, non scelerisque sapien nibh at ligula.
+            </p>
+            <p class="text-muted">
+                In vehicula pharetra laoreet. Donec interdum ex quis tincidunt sagittis. Nunc eu ullamcorper nisl. Donec eget euismod felis, aliquet maximus purus. Fusce non nisi porta, varius purus sit amet, venenatis odio. Sed nec condimentum quam, sit amet mattis neque. Vivamus non tempor neque. Morbi vitae fringilla lectus. Praesent vitae turpis at nisl viverra cursus non et orci. Integer at scelerisque est. Ut tristique nisl ut venenatis varius. Suspendisse ac porttitor dui. Nunc orci sapien, malesuada eu ultricies ut, rutrum et mi. Fusce cursus finibus tempor.
+            </p>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Skills</h2>
+                    <h3 class="section-subheading text-muted">Abilities and expertise.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="list-heading">Technical:</div>
+                    <ul>
+                        <li>JAVA</li>
+                        <li>C++</li>
+                        <li>Front-end Web Development (HTML, CSS, JS, jQuery)</li>
+                        <li>Back-end Web Development (PHP)</li>
+                        <li>Adobe Photoshop, After Effects</li>
+                        <li>Blender 3D</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="list-heading">________:</div>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Links Section -->
+    <section id="links" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Links</h2>
+                    <h3 class="section-subheading text-muted">Resources and things of interest.</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="list-heading">CSE 143 Resources</div>
+                <ul>
+                    <li><a href="https://courses.cs.washington.edu/courses/cse143/16au/">Home page</a></li>
+                    <li><a href="http://piazza.com/washington/fall2016/cse143">Piazza Discussion Board</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <!-- Contact Me -->
+            <div class="subsection">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Contact Me</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <span class="text-muted">jchiang2@uw.edu</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Around the Web -->
+            <div class="subsection">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Around the Web</h2>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="https://github.com/veylence"><span class="fa fa-github"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <span class="copyright">Copyright &copy; Jake Chiang 2016</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Grid JavaScript -->
+    <script src="js/grid.js"></script>
+
+    <!-- Gallery JavaScript -->
+    <script src="js/gallery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/agency.js"></script>
+</body>
+
+</html>
