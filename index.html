@@ -97,12 +97,6 @@
                         <a class="page-scroll" href="#projects">Projects</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#skills">Skills</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#links">Links</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -144,28 +138,10 @@
                             </div>
                         </div>
                     </a>
-                    <a class="page-scroll hexagon-button" href="#skills">
-                        <div class="hexagon-md hexagon-primary hexagon-inline hexagon-hover">
-                            <div class="hexagon-md hexagon-default hexagon-inline hexagon-inner">
-                                <span class="fa-stack nav-icon">
-                                <span class="fa fa-star fa-stack-2x"></span>
-                                </span>
-                            </div>
-                        </div>
-                    </a>
                 </div>
 
                 <!-- Row 2 -->
                 <div class="row text-center">
-                    <a class="page-scroll hexagon-button" href="#links">
-                        <div class="hexagon-md hexagon-primary hexagon-inline hexagon-hover">
-                            <div class="hexagon-md hexagon-default hexagon-inline hexagon-inner">
-                                <span class="fa-stack nav-icon">
-                                <span class="fa fa-list fa-stack-1x fa-lg"></span>
-                                </span>
-                            </div>
-                        </div>
-                    </a>
                     <a class="page-scroll hexagon-button" href="#contact">
                         <div class="hexagon-md hexagon-primary hexagon-inline hexagon-hover">
                             <div class="hexagon-md hexagon-default hexagon-inline hexagon-inner">
@@ -186,7 +162,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">About</h2>
-                    <img id="profile-img" src="img/profile.jpg" alt="Profile picture">
+                    <img id="profile-img" src="img/jchiang.jpg" alt="Profile picture">
                 </div>
             </div>
 
@@ -200,6 +176,30 @@
                 <p>
                     Fusce mattis orci id elit hendrerit auctor. Maecenas quis pellentesque nibh. Sed volutpat nisi quis eros faucibus iaculis. Nulla a tempor nibh, non ornare lectus. Nulla scelerisque est eget mi pulvinar vehicula. Mauris ornare feugiat urna eget commodo. Nunc lobortis enim iaculis lorem scelerisque, et mollis ligula viverra. Vestibulum mauris eros, tincidunt tincidunt odio eu, blandit mattis tortor. In hac habitasse platea dictumst. Pellentesque sit amet pretium tellus. Donec sagittis, elit eget iaculis consectetur, ipsum mi hendrerit nisl, nec gravida velit mi ac enim.
                 </p>
+            </div>
+
+            <div class="subsection">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="list-heading">Technical Skills:</div>
+                        <ul>
+                            <li>JAVA</li>
+                            <li>C++</li>
+                            <li>Front-end Web Development (HTML, CSS, JS, jQuery)</li>
+                            <li>Back-end Web Development (PHP)</li>
+                            <li>Adobe Photoshop, After Effects</li>
+                            <li>Blender 3D</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="list-heading">Personal Interests:</div>
+                        <ul>
+                            <li>Machine Learning</li>
+                            <li>Cryptography</li>
+                            <li>Logic Puzzles</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -218,7 +218,7 @@
             <div id="gallery-buttons" class="row text-center">
                 <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
                     <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="0">
-                        <img data-toggle="tooltip" data-placement="top" title="Project1" class="gallery-thumbnail img-circle" src="img/projects/minesweeper.png" alt="TODO">
+                        <img data-toggle="tooltip" data-placement="top" title="SFGrid" class="gallery-thumbnail img-circle" src="img/projects/project1/thumbnail.png" alt="TODO">
                     </a>
                 </div>
                 <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
@@ -256,7 +256,7 @@
     <!-- Project 1 -->
     <div class="gallery-section" data-gallery-id="0" data-open="false">
         <div class="center-block project-images">
-            <img class="gallery-main-image img-responsive" src="https://placehold.it/500x500" alt="#TODO">
+            <img class="gallery-main-image img-responsive" src="img/projects/project1/main.png" alt="#TODO">
             <div>
                 <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
                 <img class="gallery-image-display" src="https://placehold.it/200x200" alt="#TODO">
@@ -265,9 +265,13 @@
         </div>
 
         <div class="gallery-project-details">
-            <h2 class="section-heading">Hello World</h2>
+            <h2 class="section-heading">SF Grid</h2>
             <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus dolor erat, nec feugiat est rhoncus vel. Maecenas sed quam sapien. Fusce nec metus sapien. Curabitur enim tellus, facilisis et sagittis quis, placerat eget sapien. Etiam urna dolor, commodo in congue sed, imperdiet vel tellus. Sed quis urna vitae felis efficitur imperdiet id at turpis. Cras nec tellus mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas lacinia, odio vel laoreet placerat, ligula tortor luctus dui, non scelerisque sapien nibh at ligula.
+                SFGrid (Simple and Fast Grid) is a class designed for creating, managing, and displaying a graphical grid.
+                It is written in C++ for use with <a href="http://www.sfml-dev.org">SFML (Simple and Fast Multimedia Library)</a>.
+                It was originally written as a simple visual display method for personal projects.
+                SFGrid features full control customizability over gridline coloring, visibility, and thickness, texture mapping, and resizing and repositioning.
+                Additionally, it is optimized with large dimensions (> 1,000,000 individual boxes) in mind.
             </p>
             <p class="text-muted">
                 In vehicula pharetra laoreet. Donec interdum ex quis tincidunt sagittis. Nunc eu ullamcorper nisl. Donec eget euismod felis, aliquet maximus purus. Fusce non nisi porta, varius purus sit amet, venenatis odio. Sed nec condimentum quam, sit amet mattis neque. Vivamus non tempor neque. Morbi vitae fringilla lectus. Praesent vitae turpis at nisl viverra cursus non et orci. Integer at scelerisque est. Ut tristique nisl ut venenatis varius. Suspendisse ac porttitor dui. Nunc orci sapien, malesuada eu ultricies ut, rutrum et mi. Fusce cursus finibus tempor.
@@ -384,60 +388,6 @@
             </p>
         </div>
     </div>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Skills</h2>
-                    <h3 class="section-subheading text-muted">Abilities and expertise.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="list-heading">Technical:</div>
-                    <ul>
-                        <li>JAVA</li>
-                        <li>C++</li>
-                        <li>Front-end Web Development (HTML, CSS, JS, jQuery)</li>
-                        <li>Back-end Web Development (PHP)</li>
-                        <li>Adobe Photoshop, After Effects</li>
-                        <li>Blender 3D</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <div class="list-heading">________:</div>
-                    <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Links Section -->
-    <section id="links" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Links</h2>
-                    <h3 class="section-subheading text-muted">Resources and things of interest.</h3>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="list-heading">CSE 143 Resources</div>
-                <ul>
-                    <li><a href="https://courses.cs.washington.edu/courses/cse143/16au/">Home page</a></li>
-                    <li><a href="http://piazza.com/washington/fall2016/cse143">Piazza Discussion Board</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <section id="contact">
