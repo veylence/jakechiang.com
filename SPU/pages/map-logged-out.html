@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Prototype for INFO 200 SPU page">
+        <meta name="author" content="Jake Chiang">
+
+        <title>Seattle Public Utilities</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <!--
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+-->
+                    <a class="navbar-brand" href="index-logged-out.html">Seattle.gov</a>
+
+                    <ul class="nav navbar-top-links navbar-right">
+                    <li id="account-menu" class="dropdown">
+                        <a href="login.html">
+                            <b>Log in</b>
+                        </a>
+                    </li>
+                    <!-- /.dropdown -->
+                </ul>
+                    <!-- /.navbar-top-links -->
+                </div>
+                <!-- /.navbar-header -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav">
+                        <ul class="nav" id="side-menu">
+                            <li>
+                                <a href="index-logged-out.html"><i class="fa fa-home fa-fw"></i> Main page</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/HelpFAQs/index.htm"><i class="fa fa-question-circle fa-fw"></i> FAQ</a>
+                            </li>
+                            <li>
+                                <a href="map-logged-out.html"><i class="fa fa-map-marker fa-fw"></i> Find nearby disposal bins</a>
+                            </li>
+                            <li>
+                                <a href="schedule-logged-out.html"><i class="fa fa-calendar fa-fw"></i> Pick up schedule</a>
+                            </li>
+                            <li>
+                                <a href="login-pay.html"><i class="fa fa-money fa-fw"></i> Pay bill</a>
+                            </li>
+                            <li>
+                                <a href="login-request.html"><i class="fa fa-truck fa-fw"></i> Request pickup</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-trash fa-fw"></i> Trash bin services<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#.html">Report missing or<br/>damaged bin</a>
+                                    </li>
+                                    <li>
+                                        <a href="#.html">Change bin size</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-building fa-fw"></i> Business / Multi-Use
+                                    <br/><i class="fa fa-fw"></i> Building services<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="creator-logged-out.html">Poster Creator</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/AboutUs/ContactUs/index.htm"><i class="fa fa-envelope fa-fw"></i> Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.sidebar-collapse -->
+                </div>
+                <!-- /.navbar-static-side -->
+            </nav>
+
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="head-title page-header">Nearby Disposal Bins</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <div class="input-group custom-search-form">
+                    <input type="text" class="form-control" placeholder="Search around a location...">
+                    <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                </div>
+                <div class="row schedule-key map-key">
+                    <ul>
+                        <li class="day-trash-map"><span class="key-normal">Garbage Bin</span></li>
+                        <li class="day-compost"><span class="key-normal">Compost Bin</span></li>
+                        <li class="day-recycling"><span class="key-normal">Recycling Bin</span></li>
+                        <li class="handicap"><span class="key-normal">Handicap Accessible</span></li>
+                    </ul>
+                </div>
+                <div class="row map">
+                    <img src="../img/map.png" alt="">
+                </div>
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- jQuery -->
+        <script src="../vendor/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+        <!-- Morris Charts JavaScript -->
+        <script src="../vendor/raphael/raphael.min.js"></script>
+        <script src="../vendor/morrisjs/morris.min.js"></script>
+        <script src="../data/morris-data.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="../dist/js/sb-admin-2.js"></script>
+
+    </body>
+
+</html>

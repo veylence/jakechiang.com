@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Prototype for INFO 200 SPU page">
+        <meta name="author" content="Jake Chiang">
+
+        <title>Seattle Public Utilities</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <!--
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+-->
+                    <a class="navbar-brand" href="index-logged-in.html">Seattle.gov</a>
+
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li id="account-menu" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#"><i class="fa fa-user fa-fw"></i> My Account</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="index-logged-out.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                                </li>
+                            </ul>
+                            <!-- /.dropdown-user -->
+                        </li>
+                        <!-- /.dropdown -->
+                    </ul>
+                    <!-- /.navbar-top-links -->
+                </div>
+                <!-- /.navbar-header -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav">
+                        <ul class="nav" id="side-menu">
+                            <li>
+                                <a href="index-logged-in.html"><i class="fa fa-home fa-fw"></i> Main page</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/HelpFAQs/index.htm"><i class="fa fa-question-circle fa-fw"></i> FAQ</a>
+                            </li>
+                            <li>
+                                <a href="map-logged-in.html"><i class="fa fa-map-marker fa-fw"></i> Find nearby disposal bins</a>
+                            </li>
+                            <li>
+                                <a href="schedule-logged-in.html"><i class="fa fa-calendar fa-fw"></i> Pick up schedule</a>
+                            </li>
+                            <li>
+                                <a href="pay.html"><i class="fa fa-money fa-fw"></i> Pay bill</a>
+                            </li>
+                            <li>
+                                <a href="request.html"><i class="fa fa-truck fa-fw"></i> Request pickup</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-trash fa-fw"></i> Trash bin services<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#.html">Report missing or<br/>damaged bin</a>
+                                    </li>
+                                    <li>
+                                        <a href="#.html">Change bin size</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-building fa-fw"></i> Business / Multi-Use
+                                    <br/><i class="fa fa-fw"></i> Building services<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="creator-logged-in.html">Poster Creator</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/AboutUs/ContactUs/index.htm"><i class="fa fa-envelope fa-fw"></i> Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.sidebar-collapse -->
+                </div>
+                <!-- /.navbar-static-side -->
+            </nav>
+
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="head-title page-header">Pickup Schedule</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <div class="row schedule-key">
+                    <ul>
+                        <li class="day-trash"><span class="key-normal">Garbage Pickup</span></li>
+                        <li class="day-compost"><span class="key-normal">Compost Pickup</span></li>
+                        <li class="day-recycling"><span class="key-normal">Recycling Pickup</span></li>
+                    </ul>
+                </div>
+                <div class="row calendar">
+                    <div class="month">
+                        <ul>
+                            <li class="prev">&#10094;</li>
+                            <li class="next">&#10095;</li>
+                            <li>
+                                February
+                                <br> 2017
+                                <!--                            <span style="font-size:18px">2016</span>-->
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul class="weekdays">
+                        <li>Sunday</li>
+                        <li>Monday</li>
+                        <li>Tuesday</li>
+                        <li>Wednesday</li>
+                        <li>Thursday</li>
+                        <li>Friday</li>
+                        <li>Saturday</li>
+                    </ul>
+
+                    <ul class="weekdays weekdays-short">
+                        <li>S</li>
+                        <li>M</li>
+                        <li>T</li>
+                        <li>W</li>
+                        <li>T</li>
+                        <li>F</li>
+                        <li>S</li>
+                    </ul>
+
+                    <ul class="days">
+                        <li class="other-month">29<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li class="other-month">30<br/><span class="pickup-days day-hidden"><span class="day-trash">•</span><span class="day-compost">•</span><span class="day-recycling">•</span></span></li>
+                        <li class="other-month">31<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>1<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>2<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>3<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>4<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>5<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>6<br/><span class="pickup-days day-hidden"><span class="day-trash">•</span><span class="day-compost">•</span><span class="day-recycling">•</span></span></li>
+                        <li>7<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>8<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>9<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>10<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>11<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>12<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>13<br/><span class="pickup-days day-hidden"><span class="day-trash">•</span><span class="day-compost">•</span><span class="day-recycling">•</span></span></li>
+                        <li>14<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>15<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>16<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>17<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>18<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>19<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>20<br/><span class="pickup-days day-hidden"><span class="day-trash">•</span><span class="day-compost">•</span><span class="day-recycling">•</span></span></li>
+                        <li>21<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>22<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>23<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>24<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>25<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li>26<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li><span class="active">27</span><br/><span class="pickup-days day-hidden"><span class="day-trash">•</span><span class="day-compost">•</span><span class="day-recycling">•</span></span></li>
+                        <li>28<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li class="other-month">1<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li class="other-month">2<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li class="other-month">3<br/><span class="pickup-days day-hidden">•••</span></li>
+                        <li class="other-month">4<br/><span class="pickup-days day-hidden">•••</span></li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- jQuery -->
+        <script src="../vendor/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+        <!-- Morris Charts JavaScript -->
+        <script src="../vendor/raphael/raphael.min.js"></script>
+        <script src="../vendor/morrisjs/morris.min.js"></script>
+        <script src="../data/morris-data.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="../dist/js/sb-admin-2.js"></script>
+
+    </body>
+
+</html>

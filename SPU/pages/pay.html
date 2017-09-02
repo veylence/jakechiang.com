@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Prototype for INFO 200 SPU page">
+        <meta name="author" content="Jake Chiang">
+
+        <title>Seattle Public Utilities</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <!--
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+-->
+                    <a class="navbar-brand" href="index-logged-in.html">Seattle.gov</a>
+
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li id="account-menu" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#"><i class="fa fa-user fa-fw"></i> My Account</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="index-logged-out.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                                </li>
+                            </ul>
+                            <!-- /.dropdown-user -->
+                        </li>
+                        <!-- /.dropdown -->
+                    </ul>
+                    <!-- /.navbar-top-links -->
+                </div>
+                <!-- /.navbar-header -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav">
+                        <ul class="nav" id="side-menu">
+                            <li>
+                                <a href="index-logged-in.html"><i class="fa fa-home fa-fw"></i> Main page</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/HelpFAQs/index.htm"><i class="fa fa-question-circle fa-fw"></i> FAQ</a>
+                            </li>
+                            <li>
+                                <a href="map-logged-in.html"><i class="fa fa-map-marker fa-fw"></i> Find nearby disposal bins</a>
+                            </li>
+                            <li>
+                                <a href="schedule-logged-in.html"><i class="fa fa-calendar fa-fw"></i> Pick up schedule</a>
+                            </li>
+                            <li>
+                                <a href="pay.html"><i class="fa fa-money fa-fw"></i> Pay bill</a>
+                            </li>
+                            <li>
+                                <a href="request.html"><i class="fa fa-truck fa-fw"></i> Request pickup</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-trash fa-fw"></i> Trash bin services<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#.html">Report missing or<br/>damaged bin</a>
+                                    </li>
+                                    <li>
+                                        <a href="#.html">Change bin size</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-building fa-fw"></i> Business / Multi-Use
+                                    <br/><i class="fa fa-fw"></i> Building services<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="creator-logged-in.html">Poster Creator</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/AboutUs/ContactUs/index.htm"><i class="fa fa-envelope fa-fw"></i> Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.sidebar-collapse -->
+                </div>
+                <!-- /.navbar-static-side -->
+            </nav>
+
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="head-title page-header">Pay Bill</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default payment">
+                            <div class="panel-heading">
+                                Current Bill for <span>March 6th</span>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <label>Amount Due:</label>
+                                                <div class="form-group">
+                                                    <input class="form-control" id="disabledInput" type="text" placeholder="" disabled value="$24.79">
+                                                </div>
+                                            </div>
+
+                                            <br/>
+
+                                            <div class="form-group">
+                                                <label>Card Information:</label>
+                                                <select class="form-control">
+                                                    <option>Visa</option>
+                                                    <option>Mastercard</option>
+                                                    <option>American Express</option>
+                                                    <option>Discover</option>
+                                                    <option>Capital One</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                        <form role="form">
+                                            <div class="form-group input-group">
+                                                <span class="input-group-addon"><i class="fa fa-credit-card"></i>
+                                                Card Number
+                                            </span>
+                                                <input type="text" class="form-control" placeholder="Credit Card Number" value="**** **** **** 1234">
+                                            </div>
+                                            <div class="form-group input-group">
+                                                <span class="input-group-addon">
+                                                    Expires (MM/YY)
+                                            </span>
+                                                <input type="text" class="form-control" placeholder="" value="01/18">
+                                            </div>
+                                            <div class="form-group input-group">
+                                                <span class="input-group-addon">
+                                                    CVV2/CVC2
+                                            </span>
+                                                <input type="text" class="form-control" placeholder="" value="999">
+                                            </div>
+                                            <p class="help-block"><em>The last 3 digits displayed on the back of your card.</em></p>
+
+                                            <br/>
+
+                                            <label>PayPal Information:</label>
+                                            <div class="form-group input-group">
+                                                <span class="input-group-addon"><i class="fa fa-paypal"></i>
+                                            </span>
+                                                <input type="text" class="form-control" placeholder="Paypal email" value="ettie.larson@yahoo.com">
+                                            </div>
+                                            <br/>
+                                            <br/>
+                                            <div class="form-group">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" value="" checked>Turn on automatic payments
+                                                        <p class="help-block">You will be billed on the <b>6th</b> of every month</p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <a href="index-logged-in.html"><button type="submit" class="btn btn-primary">Confirm Payment</button></a>
+                                    </div>
+                                    <!-- /.col-lg-6 (nested) -->
+                                </div>
+                                <!-- /.row (nested) -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- jQuery -->
+        <script src="../vendor/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+        <!-- Morris Charts JavaScript -->
+        <script src="../vendor/raphael/raphael.min.js"></script>
+        <script src="../vendor/morrisjs/morris.min.js"></script>
+        <script src="../data/morris-data.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="../dist/js/sb-admin-2.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Prototype for INFO 200 SPU page">
+        <meta name="author" content="Jake Chiang">
+
+        <title>Seattle Public Utilities</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="">Seattle.gov</a>
+
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li id="account-menu" class="dropdown">
+                            <a href="login.html">
+                                <b>Log in</b>
+                            </a>
+                        </li>
+                        <!-- /.dropdown -->
+                    </ul>
+                    <!-- /.navbar-top-links -->
+                </div>
+                <!-- /.navbar-header -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav">
+                        <ul class="nav" id="side-menu">
+                            <li>
+                                <a href="index-logged-out.html"><i class="fa fa-home fa-fw"></i> Main page</a>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/HelpFAQs/index.htm"><i class="fa fa-question-circle fa-fw"></i> FAQ</a>
+                            </li>
+                            <li>
+                                <a href="map-logged-out.html"><i class="fa fa-map-marker fa-fw"></i> Find nearby disposal bins</a>
+                            </li>
+                            <li>
+                                <a href="schedule-logged-out.html"><i class="fa fa-calendar fa-fw"></i> Pick up schedule</a>
+                            </li>
+                            <li>
+                                <a href="login-pay.html"><i class="fa fa-money fa-fw"></i> Pay bill</a>
+                            </li>
+                            <li>
+                                <a href="login-request.html"><i class="fa fa-truck fa-fw"></i> Request pickup</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-trash fa-fw"></i> Trash bin services<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#">Report missing or<br/>damaged bin</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Change bin size</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-building fa-fw"></i> Business / Multi-Use
+                                    <br/><i class="fa fa-fw"></i> Building services<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="creator-logged-out.html">Poster Creator</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="http://www.seattle.gov/util/AboutUs/ContactUs/index.htm"><i class="fa fa-envelope fa-fw"></i> Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.sidebar-collapse -->
+                </div>
+                <!-- /.navbar-static-side -->
+            </nav>
+
+            <div id="page-wrapper" class="front-page">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="head-title">Seattle Public Utilities</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-lg-2 col-sm-3 col-xs-2">
+                                        <i class="fa fa-info-circle fa-3x"></i>
+                                    </div>
+                                    <div class="col-lg-10 col-sm-9 col-xs-10">
+                                        <div class="tip-title"><em>Do you know?</em></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="tip-body">
+                                        When disposing of pizza boxes the bottom should be put in compost and the top put in recycling.
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left light-blue">See more tips</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /#page-wrapper -->
+
+            <div class="second-page">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12">
+                        <a href="http://www.seattle.gov/util/MyServices/Water/AbouttheWaterSystem/WaterSystemOverview/index.htm">
+                            <div class="panel news-box-panel ">
+                                <div class="overlay"></div>
+                                <div class="panel-heading">
+                                    Where does our water come from?
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="news-box panel-body">
+                                    <img src="../img/promo1.jpg" alt="">
+                                    <p class="news-box-description">
+                                        Seattle's water comes from two regional mountain watersheds. We protect our watersheds and monitor our supply to give you fresh, safe drinking water. </p>
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- /.panel -->
+                        </a>
+                    </div>
+
+                    <div class="col-sm-4 col-xs-12">
+                        <a href="http://www.seattle.gov/util/EnvironmentConservation/MyHome/PreventPollution/AutoLeaks/index.htm">
+                            <div class="panel news-box-panel ">
+                                <div class="overlay"></div>
+                                <div class="panel-heading">
+                                    Free Auto Leaks workshops
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="news-box panel-body">
+                                    <img src="../img/promo2.jpg" alt="">
+                                    <p class="news-box-description">
+                                        When oil and other automotive fluids make it into our waterways, it harms wildlife and habitat. Sign up for a free workshop to learn how to detect and fix auto leaks. </p>
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- /.panel -->
+                        </a>
+                    </div>
+
+                    <div class="col-sm-4 col-xs-12">
+                        <a href="http://www.seattle.gov/util/MyServices/Garbage/DumpTransferStation/NorthStation/index.htm">
+                            <div class="panel news-box-panel ">
+                                <div class="overlay"></div>
+                                <div class="panel-heading">
+                                    The North Transfer Station is now open
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="news-box panel-body">
+                                    <img src="../img/promo3.jpg" alt="">
+                                    <p class="news-box-description">
+                                        The new facility in the Wallingford neighborhood is not only designed to handle waste more efficiently and safely, but also features public art and a space to create community. </p>
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- /.panel -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- jQuery -->
+        <script src="../vendor/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+        <!-- Morris Charts JavaScript -->
+        <script src="../vendor/raphael/raphael.min.js"></script>
+        <script src="../vendor/morrisjs/morris.min.js"></script>
+        <script src="../data/morris-data.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="../dist/js/sb-admin-2.js"></script>
+
+    </body>
+
+</html>
