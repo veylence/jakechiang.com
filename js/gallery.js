@@ -15,7 +15,7 @@
             //Find the gallery section with the corresponding ID as the button
             for (var i = 0; i < gallerySections.length; i++) {
                 var gallerySection = gallerySections[i];
-                
+
                 //If the gallery section is found and is closed, open it
                 if ($(gallerySection).attr("data-gallery-id") == id && "0" == $(gallerySection).height()) {
                     //Let the gallery section decide it's own height via "auto"
@@ -33,6 +33,8 @@
                     //Set this gallery section as "open"
                     $(gallerySection).attr("data-open", "true");
                     openProjectId = id;
+
+                    setTimeout(fixOpenSectionSize, 500);
                 }
                 //Otherwise, close it if it's not the desired gallery, or even
                 //if it is, since that means it should be closed
@@ -58,17 +60,21 @@
 
         //If the window is resized, auto adjust the height of the open section
         $(window).resize(function () {
-            var gallerySections = $(".gallery-section");
-
-            for (var i = 0; i < gallerySections.length; i++) {
-                var gallerySection = gallerySections[i];
-
-                if ($(gallerySection).attr("data-gallery-id") == openProjectId) {
-                    $(gallerySection).css("height", "auto");
-                }
-            }
+            fixOpenSectionSize();
         });
     });
+
+    function fixOpenSectionSize() {
+        var gallerySections = $(".gallery-section");
+
+        for (var i = 0; i < gallerySections.length; i++) {
+            var gallerySection = gallerySections[i];
+
+            if ($(gallerySection).attr("data-gallery-id") == openProjectId) {
+                $(gallerySection).css("height", "auto");
+            }
+        }
+    }
 })(jQuery); // End of use strict
 
 
