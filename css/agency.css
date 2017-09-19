@@ -328,7 +328,13 @@ header .intro-text {
 }
 
 .section-buttons {
-    margin-top: 265px;
+    margin-top: 90px;
+}
+
+@media (min-width: 768px) {
+    .section-buttons {
+        margin-top: 265px;
+    }
 }
 
 .section-button {
@@ -889,7 +895,9 @@ video {
     }
 }
 
+
 /* Prevent images from being stretched if the screen is too large */
+
 @media (min-width: 3000px) {
     .painting-gallery-image {
         width: 3000px;
