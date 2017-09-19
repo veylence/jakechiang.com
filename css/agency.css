@@ -792,6 +792,10 @@ img::-moz-selection {
     /* For the shadow (below) */
 }
 
+.gallery-section-dark {
+    background-color: #1a1a1a;
+}
+
 .gallery-section-title {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -800,6 +804,15 @@ img::-moz-selection {
 .gallery-section .section-heading {
     margin-top: 15px;
     text-align: left;
+}
+
+.gallery-section-dark .section-heading {
+    margin-top: 50px;
+}
+
+.gallery-section-dark,
+.gallery-section-dark .section-heading {
+    text-align: center;
 }
 
 .gallery-section:before {
@@ -840,6 +853,10 @@ video {
     /* Removing the extra margin added to the bottom */
 }
 
+.painting-gallery-image {
+    margin-top: 40px;
+}
+
 @media (min-width: 768px) {
     .gallery-main-image {
         margin: 0;
@@ -847,16 +864,44 @@ video {
         height: 500px;
         /* ^^^^ TODO: Remove and leave as auto (for landscape imgs?) */
     }
+    .painting-gallery-image {
+        height: auto;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+    }
+    .painting-gallery-image-steps {
+        margin-top: 10px;
+    }
     .project-images {
         display: inline;
         float: left;
         margin-right: 20px;
+    }
+    .gallery-section-dark .project-images {
+        margin-right: 0;
     }
     .gallery-image-display {
         margin: 0;
         margin-right: 8px;
         margin-top: 8px;
     }
+}
+
+/* Prevent images from being stretched if the screen is too large */
+@media (min-width: 3000px) {
+    .painting-gallery-image {
+        width: 3000px;
+    }
+}
+
+.painting-gallery-image-steps {
+    margin-top: 10px;
+}
+
+.painting-gallery-end {
+    margin-top: 50px;
 }
 
 .gallery-project-details {
@@ -965,7 +1010,9 @@ section#contact {
     content: " –––––––";
 }
 
+
 /* For lazy loading, if JS is disabled */
+
 img.lazy {
     display: none;
 }
