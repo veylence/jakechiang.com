@@ -9,58 +9,59 @@
     == New images should have their size minimized before being added.
     <------ ----------------- ----->
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Personal website of Jake Chiang">
-    <meta name="author" content="Jake Chiang">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Personal website of Jake Chiang">
+        <meta name="author" content="Jake Chiang">
 
-    <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
+        <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
 
-    <title>Jake Chiang</title>
+        <title>Jake Chiang</title>
 
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-101951927-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+            ga('create', 'UA-101951927-1', 'auto');
+            ga('send', 'pageview');
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        </script>
 
-    <!-- CSS Hexagon -->
-    <!--    <link href="vendor/css-hexagon/hexagon.min.css" rel="stylesheet">-->
+        <!-- Bootstrap Core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <!--    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Kanit:100" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+        <!-- CSS Hexagon -->
+        <!--    <link href="vendor/css-hexagon/hexagon.min.css" rel="stylesheet">-->
 
-    <!-- Theme CSS -->
-    <link href="css/agency.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!--    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Kanit:100" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+
+        <!-- Theme CSS -->
+        <link href="css/agency.css" rel="stylesheet">
 
 
-    <!--[if lt IE 9]>
+        <!--[if lt IE 9]>
 
     <![endif]-->
 
-    <!--
+        <!--
        Test if Internet Explorer is being used. If it is, and its
        version is <9, jQuery 1.x is used. If it isn't, or IE version
        9+ is in use, jQuery 2.x is loaded instead.
@@ -72,10 +73,10 @@
        Additional note: The "| (!IE)" statement for loading jQuery
        2.x isn't necessary, but cleaner.
     -->
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!-- ******************************************************** -->
-    <!--[if lt IE 9]>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!-- ******************************************************** -->
+        <!--[if lt IE 9]>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script>
             if (!window.jQuery) {
@@ -87,808 +88,845 @@
         <script src="vendor/respond/respond.min.js"></script>
         <![endif]-->
 
-    <!--[if gte IE 9] | (!IE)><!-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script>
-        if (!window.jQuery) {
-            document.write('<script src="js/jquery-2.2.4.min.js"><\/script>');
-        }
-    </script>
-    <!--<![endif]-->
-    <!-- ******************************************************** -->
+        <!--[if gte IE 9] | (!IE)><!-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script>
+            if (!window.jQuery) {
+                document.write('<script src="js/jquery-2.2.4.min.js"><\/script>');
+            }
 
-    <link rel="stylesheet" href="css/jquery.lazyloadxt.spinner.css">
-    <script src="vendor/jquery.lazyloadxt.extra.js"></script>
-</head>
+        </script>
+        <!--<![endif]-->
+        <!-- ******************************************************** -->
 
-<body id="page-top" class="index">
+        <link rel="stylesheet" href="css/jquery.lazyloadxt.spinner.css">
+        <script src="vendor/jquery.lazyloadxt.extra.js"></script>
+    </head>
 
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container">
-            <!-- Grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a id="navbar-link" class="navbar-brand page-scroll" href="#page-top">
-                    <img id="logo" src="img/JCLogo.png" alt="JC Logo">
-                </a>
+    <body id="page-top" class="index">
+
+        <!-- Navigation -->
+        <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+            <div class="container">
+                <!-- Grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a id="navbar-link" class="navbar-brand page-scroll" href="#page-top">
+                        <img id="logo" src="img/JCLogo.png" alt="JC Logo">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a id="navbar-link" class="page-scroll" href="#about">About</a>
+                        </li>
+                        <li>
+                            <a id="navbar-link" class="page-scroll" href="#projects">Portfolio</a>
+                        </li>
+                        <li>
+                            <a id="navbar-link" class="page-scroll" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
+            <!-- /.container-fluid -->
+        </nav>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a id="navbar-link" class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a id="navbar-link" class="page-scroll" href="#projects">Portfolio</a>
-                    </li>
-                    <li>
-                        <a id="navbar-link" class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
-    <header id="header">
-        <!-- TODO
+        <!-- Header -->
+        <header id="header">
+            <!-- TODO
         <div id="grid-area"> </div>
         <div id="grid-area-overlay"> </div>
 -->
 
-        <div class="container">
-            <div class="intro-text">
-                <span id="name-header">Jake Chiang</span>
+            <div class="container">
+                <div class="intro-text">
+                    <span id="name-header">Jake Chiang</span>
 
-                <div class="section-buttons row text-center">
-                    <div class="col-md-4">
-                        <a class="page-scroll hexagon-button" href="#about">
-                            <div class="section-button">
-                                About
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a class="page-scroll hexagon-button" href="#projects">
-                            <div class="section-button">
-                                Portfolio
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a class="page-scroll hexagon-button" href="#contact">
-                            <div class="section-button">
-                                Contact
-                            </div>
-                        </a>
+                    <div class="section-buttons row text-center">
+                        <div class="col-md-4">
+                            <a class="page-scroll hexagon-button" href="#about">
+                                <div class="section-button">
+                                    About
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="page-scroll hexagon-button" href="#projects">
+                                <div class="section-button">
+                                    Portfolio
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="page-scroll hexagon-button" href="#contact">
+                                <div class="section-button">
+                                    Contact
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- Grid -->
-    <!--
+        <!-- Grid -->
+        <!--
     <section id="grid" class="bg-light-gray">
 
     </section>
 -->
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About</h2>
-                    <img class="lazy" id="profile-img" data-src="img/jchiang.jpg" alt="Profile Picture" title="Profile Picture">
-                    <noscript><img id="profile-img" src="img/jchiang.jpg" alt="Profile Picture" title="Profile Picture"></noscript>
-                </div>
-            </div>
-
-            <div>
-                <p>
-                    Current undergraduate at the <a href="https://www.washington.edu/" target="_blank">University of Washington, Seattle</a> studying Computer Science and Applied &amp; Computational Mathematical Sciences (ACMS). I am currently a TA for the <a href="https://www.cs.washington.edu/311" target="_blank">CSE 311</a> Foundations of Computing class at UW, and have previously TA'd for <a href="https://www.cs.washington.edu/142" target="_blank">CSE 142</a> and <a href="https://www.cs.washington.edu/143" target="_blank">CSE 143</a> (Computer Programming I &amp; II). I am interested in the practical applications of computer science, particularly in the fields of artificial intelligence. I enjoy exploring and solving problems across a range of other subjects, and have a passion for challenges and working through them.
-                </p>
-
-                <p>
-
-                </p>
-            </div>
-
-            <div class="subsection">
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="list-heading">Technical Skills:</div>
-                        <ul>
-                            <li>Java, C++, Python, C#, Bash</li>
-                            <li>Git</li>
-                            <li>Front-end Web Development: HTML, CSS, JS, jQuery</li>
-                            <li>Back-end Web Development: PHP, SQL</li>
-                            <li>Adobe Photoshop, After Effects</li>
-                            <li>Blender 3D, Modo</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="list-heading">Personal Interests:</div>
-                        <ul>
-                            <li>Machine Learning</li>
-                            <li>Cryptography</li>
-                            <li>Drawing and Painting</li>
-                            <li>Rock Climbing</li>
-                            <li>Competitive Programming</li>
-                        </ul>
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">About</h2>
+                        <img id="profile-img" src="img/jchiang.jpg" alt="Profile Picture" title="Profile Picture">
                     </div>
                 </div>
-            </div>
 
-            <div id="resume-link">
-                <a href="files/JakeChiangResume.pdf" target="_blank">
-                    <div>
-                        View
-                        <br/> Full Résumé
-                        <br/>
-                        <span style="padding-top: 15px" data-toggle="tooltip" class="fa fa-file-text-o fa-2x"></span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="bg-light-gray">
-
-        <!-- Title and Row 1 -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Click to expand and explore.</h3>
-                </div>
-            </div>
-
-            <div class="row gallery-section-title">
-                <div class="col-lg-12 text-center">
-                    <h3 class="section-heading unselectable fancy-header">Programming</h3>
-                </div>
-            </div>
-
-            <div class="row text-center">
-                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="0">
-                        <img data-toggle="tooltip" data-placement="bottom" title="SFGrid" class="gallery-thumbnail img-circle undraggable" src="img/projects/sfgrid/main.png" alt="SFGrid">
-                    </a>
-                </div>
-                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="1">
-                        <img data-toggle="tooltip" data-placement="bottom" title="Pathfinding Comparator" class="gallery-thumbnail img-circle undraggable" src="img/projects/pathfinding/main.png" alt="Pathfinding Comparator">
-                    </a>
-                </div>
-                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="2">
-                        <img data-toggle="tooltip" data-placement="bottom" title="Battleship AI" class="gallery-thumbnail img-circle undraggable" src="img/projects/battleship/main.png" alt="Battleship AI">
-                    </a>
-                </div>
-                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="3">
-                        <img data-toggle="tooltip" data-placement="bottom" title="Sorting Comparator" class="gallery-thumbnail img-circle undraggable" src="img/projects/sorting/thumbnail.png" alt="Sorting Comparator">
-                    </a>
-                </div>
-                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="4">
-                        <img data-toggle="tooltip" data-placement="bottom" title="3D Visualizations" class="gallery-thumbnail img-circle undraggable" src="img/projects/3d/thumbnail.png" alt="3D Visualizations">
-                    </a>
-                </div>
-                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="5">
-                        <img data-toggle="tooltip" data-placement="bottom" title="Critters Analyzer and AI" class="gallery-thumbnail img-circle undraggable" src="img/projects/critters/thumbnail.png" alt="Critters Analyzer and AI">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!----------------- 1st Row Projects ----------------->
-
-        <!-- Project 0 -->
-        <div class="gallery-section" data-gallery-id="0" data-open="false">
-            <div class="center-block project-images">
-                <img class="gallery-main-image img-responsive lazy" data-src="img/projects/sfgrid/main.png" alt="SFGrid" title="SFGrid">
-                <noscript><img class="gallery-main-image img-responsive" src="img/projects/sfgrid/main.png" alt="SFGrid" title="SFGrid"></noscript>
-            </div>
-
-            <div class="gallery-project-details">
-                <h2 class="section-heading">SF Grid</h2>
-                <p class="text-muted">
-                    SFGrid (Simple and Fast Grid) is a class designed for creating, managing, and displaying a graphical grid. It is written in C++ for use with <a href="http://www.sfml-dev.org">SFML (Simple and Fast Multimedia Library)</a>. It was originally written as a simple visual display method for personal projects. SFGrid features full control customizability over gridline coloring, visibility, and thickness, texture mapping, and resizing and repositioning. Additionally, it is optimized with large dimensions (> 1,000,000 individual boxes) in mind.
-                </p>
-                <p class="text-muted">
-                    The original motivation for this project was to have a simple and flexible graphical output method for future projects. Since, SFGrid has been used in several, such as the <a class="gallery-button" data-gallery-button-id="1">Pathfinding Comparitor</a> and <a class="gallery-button" data-gallery-button-id="6">Minesweeper Clone</a>.
-                </p>
-            </div>
-        </div>
-
-        <!-- Project 1 -->
-        <div class="gallery-section" data-gallery-id="1" data-open="false">
-            <div class="center-block project-images">
-                <img class="gallery-main-image img-responsive lazy" data-src="img/projects/pathfinding/main.png" alt="Pathfinding Comparator" title="Pathfinding Comparator">
-                <noscript><img class="gallery-main-image img-responsive" src="img/projects/pathfinding/main.png" alt="Pathfinding Comparator" title="Pathfinding Comparator"></noscript>
-            </div>
-
-            <div class="gallery-project-details">
-                <h2 class="section-heading">Pathfinding Algorithm Comparator</h2>
-                <p class="text-muted">
-                    An exploration of various pathfinding algorithms and the traits of each. This program allows for the creation of identical obstacle courses of variable size that several algorithms can then traverse simultaneously. The interface gives the user easy editing and viewing capabilities, mirroring all edits to the obstacles grids for all algorithms and allowing step-by-step or continuous execution of the algorithms in action.
-                </p>
-                <p class="text-muted">
-                    The motivation for this project was familiarization and examination of available algorithms, seeing implementation and performance benefits of each. It was also one of the first uses of <a class="gallery-button" data-gallery-button-id="0">SFGrid</a>.
-                </p>
-            </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="gallery-section" data-gallery-id="2" data-open="false">
-            <div class="center-block project-images">
-                <img class="gallery-main-image img-responsive lazy" data-src="img/projects/battleship/main.png" alt="Battleship AI" title="Battleship AI">
-                <noscript><img class="gallery-main-image img-responsive" src="img/projects/battleship/main.png" alt="Battleship AI" title="Battleship AI"></noscript>
-            </div>
-
-            <div class="gallery-project-details">
-                <h2 class="section-heading">Battleship AI</h2>
-                <p class="text-muted">
-                    An attempt at creating an optimal artificial intelligence for playing the game of Battleship. Several bots, each empoying a unique approach, were developed along with the game manager. The tournament manager that runs testing of these bots features adjustable game parameters and presets for various board sizes, ship fleets, along with round-robin tournament play with stat tracking.
-                </p>
-                <p class="text-muted">
-                    This project also built on an improved version of the tournament management framework created for the <a class="gallery-button" data-gallery-button-id="11">Rock-Paper-Scissors AI testing program</a>.
-                </p>
-            </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="gallery-section" data-gallery-id="3" data-open="false">
-            <div class="center-block project-images">
-                <img class="gallery-main-image img-responsive lazy" data-src="img/projects/sorting/main.png" alt="Sorting Comparator" title="Sorting Comparator">
-                <noscript><img class="gallery-main-image img-responsive" src="img/projects/sorting/main.png" alt="Sorting Comparator" title="Sorting Comparator"></noscript>
-            </div>
-
-            <div class="gallery-project-details">
-                <h2 class="section-heading">Sorting Algorithm Comparator</h2>
-                <p class="text-muted">
-                    An exploration of various sorting algorithms and tradeoffs of each when given different data inputs. This program lets the user create a starting data set that can then be run through different algorithms while visually displaying the data array at each step. It also tracks and displays array accesses, comparisons, and modifications for quantitative analysis.
-                </p>
-            </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="gallery-section" data-gallery-id="4" data-open="false">
-            <div class="center-block project-images">
-                <img class="gallery-main-image img-responsive lazy" data-src="img/projects/3d/main.png" alt="Riemann Sum Visualizer" title="Riemann Sum Visualizer">
-                <noscript><img class="gallery-main-image img-responsive" src="img/projects/3d/main.png" alt="Riemann Sum Visualizer" title="Riemann Sum Visualizer"></noscript>
                 <div>
-                    <img class="gallery-image-display lazy" data-src="img/projects/3d/sub1.png" alt="Riemann Sum Visualizer 2" title="Riemann Sum Visualizer 2">
-                    <img class="gallery-image-display lazy" data-src="img/projects/3d/sub2.png" alt="Perspective Projection" title="Perspective Projection">
-                    <img class="gallery-image-display lazy" data-src="img/projects/3d/sub3.png" alt="TNB Frame Visualizer" title="TNB Frame Visualizer">
+                    <p>
+                        Current undergraduate at the <a href="https://www.washington.edu/" target="_blank">University of Washington, Seattle</a>
+                        studying Computer Science and Applied &amp; Computational Mathematical Sciences (ACMS). I am currently a TA for the
+                        <a href="https://www.cs.washington.edu/311" target="_blank">CSE 311</a> Foundations of Computing class at UW, and have previously
+                        TA'd for <a href="https://www.cs.washington.edu/142" target="_blank">CSE 142</a> and <a href="https://www.cs.washington.edu/143" target="_blank">CSE 143</a>
+                        (Computer Programming I &amp; II). I am interested in the practical applications of computer science, particularly in the fields of machine learning.
+                        I enjoy exploring and solving problems across a range of other subjects, and have a passion for honing projects to perfection and expanding my repertoire by pursuing challenges.
+                    </p>
 
+                    <p>
+
+                    </p>
+                </div>
+
+                <div class="subsection">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="list-heading">Technical Skills:</div>
+                            <ul>
+                                <li>Java, C++, Python, C#, Bash</li>
+                                <li>Git</li>
+                                <li>Front-end Web Development: HTML, CSS, JS, jQuery</li>
+                                <li>Back-end Web Development: PHP, SQL</li>
+                                <li>Adobe Photoshop, After Effects</li>
+                                <li>Blender 3D, Modo</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="list-heading">Personal Interests:</div>
+                            <ul>
+                                <li>Machine Learning</li>
+                                <li>Cryptography</li>
+                                <li>Drawing and Painting</li>
+                                <li>Rock Climbing</li>
+                                <li>Competitive Programming</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="resume-link">
+                    <a href="files/JakeChiangResume.pdf" target="_blank">
+                        <div>
+                            View
+                            <br/> Full Résumé
+                            <br/>
+                            <span style="padding-top: 15px" data-toggle="tooltip" class="fa fa-file-text-o fa-2x"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-light-gray">
+
+            <!-- Title and Row 1 -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Portfolio</h2>
+                        <h3 class="section-subheading text-muted">Click to expand and explore.</h3>
+                    </div>
+                </div>
+
+                <div class="row gallery-section-title">
+                    <div class="col-lg-12 text-center">
+                        <h3 class="section-heading unselectable fancy-header">Programming</h3>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="0">
+                            <img data-toggle="tooltip" data-placement="bottom" title="SFGrid" class="gallery-thumbnail img-circle undraggable" src="img/projects/sfgrid/main.png" alt="SFGrid">
+                        </a>
+                    </div>
+                    <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="1">
+                            <img data-toggle="tooltip" data-placement="bottom" title="Pathfinding Comparison" class="gallery-thumbnail img-circle undraggable" src="img/projects/pathfinding/thumbnail.png" alt="Pathfinding Comparison">
+                        </a>
+                    </div>
+                    <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="2">
+                            <img data-toggle="tooltip" data-placement="bottom" title="Battleship AI" class="gallery-thumbnail img-circle undraggable" src="img/projects/battleship/main.png" alt="Battleship AI">
+                        </a>
+                    </div>
+                    <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="3">
+                            <img data-toggle="tooltip" data-placement="bottom" title="3D Visualizations" class="gallery-thumbnail img-circle undraggable" src="img/projects/3d/thumbnail.png" alt="3D Visualizations">
+                        </a>
+                    </div>
+                    <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="4">
+                            <img data-toggle="tooltip" data-placement="bottom" title="Sorting Comparison" class="gallery-thumbnail img-circle undraggable" src="img/projects/sorting/thumbnail.png" alt="Sorting Comparison">
+                        </a>
+                    </div>
+                    <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="5">
+                            <img data-toggle="tooltip" data-placement="bottom" title="Critters Analyzer and AI" class="gallery-thumbnail img-circle undraggable" src="img/projects/critters/thumbnail.png" alt="Critters Analyzer and AI">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!----------------- 1st Row Projects ----------------->
+
+            <!-- Project 0 -->
+            <div class="gallery-section" data-gallery-id="0" data-open="false">
+                <div class="center-block project-images">
+                    <img class="gallery-main-image img-responsive lazy" data-src="img/projects/sfgrid/main.png" alt="SFGrid" title="SFGrid">
+                    <noscript><img class="gallery-main-image img-responsive" src="img/projects/sfgrid/main.png" alt="SFGrid" title="SFGrid"></noscript>
+                </div>
+
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">SF Grid</h2>
+                    <p class="text-muted">
+                        SFGrid (Simple and Fast Grid) is a class designed for creating, managing, and displaying a graphical grid. It is written in C++ for use with <a href="https://www.sfml-dev.org">SFML (Simple and Fast Multimedia Library)</a>. It was originally written as a simple visual display method for personal projects. SFGrid features full control customizability over gridline coloring, visibility, and thickness, texture mapping, and resizing and repositioning. Additionally, it is optimized with large dimensions (> 1,000,000 individual boxes) in mind.
+                    </p>
+                    <p class="text-muted">
+                        The original motivation for this project was to have a simple and flexible graphical output method for future projects. Since then, I've ported SFGrid to Java, and have used it in several projects, such as the <a class="gallery-button" data-gallery-button-id="1">Pathfinding Comparison</a> and <a class="gallery-button" data-gallery-button-id="6">Minesweeper Clone</a>.
+                    </p>
+                    <p>
+                        <a href="https://github.com/veylence/JavaSimpleGrid" target="_blank"><strong>View this project on Github</strong></a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project 1 -->
+            <div class="gallery-section" data-gallery-id="1" data-open="false">
+                <div class="center-block project-images">
+                    <!-- "poster" will be displayed until the source is loaded (backup if it fails to load) -->
+                    <video class="lazy" autoplay="autoplay" loop="loop" width="500" height="500" data-poster="img/projects/pathfinding/main.png">
+                        <source data-src="img/projects/pathfinding/demo.webm" type="video/webm" />
+                        <img class="gallery-main-image img-responsive" data-src="img/projects/pathfinding/main.png" alt="Pathfinding Comparison" title="Pathfinding Comparison">
+                    </video>
                     <noscript>
-                        <img class="gallery-image-display" src="img/projects/3d/sub1.png" alt="Riemann Sum Visualizer 2" title="Riemann Sum Visualizer 2">
-                        <img class="gallery-image-display" src="img/projects/3d/sub2.png" alt="Perspective Projection" title="Perspective Projection">
-                        <img class="gallery-image-display" src="img/projects/3d/sub3.png" alt="TNB Frame Visualizer" title="TNB Frame Visualizer">
+                        <video autoplay="autoplay" loop="loop" width="500" height="500" poster="img/projects/pathfinding/main.png">
+                            <source src="img/projects/pathfinding/demo.webm" type="video/webm" />
+                            <img class="gallery-main-image img-responsive" src="img/projects/pathfinding/main.png" alt="Pathfinding Comparison" title="Pathfinding Comparison">
+                        </video>
                     </noscript>
                 </div>
-            </div>
 
-            <div class="gallery-project-details">
-                <h2 class="section-heading">3D Graphics and Visualizations</h2>
-                <p class="text-muted">
-                    A graphics engine created as an application of 3D calculus and linear algebra skills and later utilized for visualization of 3D mathematical concepts. It allows for the rudimentary display of points in 3D space, with the additional option of connecting them into line segments.
-                </p>
-                <p class="text-muted">
-                    The engine works by simulating a movable 2D viewing plane to act as the camera. Points in space are then traced through the plane to the center of projection behind it. Points are then drawn using the coordinates of the line-plane intersections, producing the image for display. If line segments are being produced, an additional step is taken, identifying whether one of the two connected points is out of view and computing an intermediate point on the viewing plane if so.
-                </p>
-                <p class="text-muted">
-                    Several implementation of this program can be seen in the adjacent images, including a basic perspective projection, TNB frame visualizer, and Riemann sum approximator.
-                </p>
-            </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="gallery-section" data-gallery-id="5" data-open="false">
-            <div class="center-block project-images">
-                <img class="gallery-main-image img-responsive lazy" data-src="img/projects/critters/main.png" alt="Critters AI and Analyzer" title="Critters AI and Analyzer">
-                <noscript><img class="gallery-main-image img-responsive" src="img/projects/critters/main.png" alt="Critters AI and Analyzer" title="Critters AI and Analyzer"></noscript>
-            </div>
-
-            <div class="gallery-project-details">
-                <h2 class="section-heading">Critter Analyzer and AI</h2>
-                <p class="text-muted">
-                    This is a collection of modified support files for the <a href="https://courses.cs.washington.edu/courses/cse143x/15au/homework/5/spec.pdf">Critters simulation</a>, created with the purpose of testing custom made Critter AI for the described tournament. It adds the ability to setup specific scenarios, as well as save and load setups to disk.
-                </p>
-                <p class="text-muted">
-                    Multiple game simulations can be ran in rapid succession to quickly evaluate the efficacy of different AI. This automated running ability has allowed for the inclusion of several genetic algorithm based critters that can evolve over several games, developing more efficient and complex strategies.
-                </p>
-                <p class="text-muted">
-                    This project also built on an improved version of the tournament management framework created for the <a class="gallery-button" data-gallery-button-id="11">Rock-Paper-Scissors AI testing program</a>.
-                </p>
-            </div>
-        </div>
-
-        <!-- Row 2 -->
-        <div class="container">
-            <div class="row text-center">
-                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="6">
-                        <img data-toggle="tooltip" data-placement="bottom" title="Minesweeper Clone" class="gallery-thumbnail img-circle undraggable" src="img/projects/minesweeper/thumbnail.png" alt="Minesweeper Clone">
-                    </a>
-                </div>
-                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="7">
-                        <img data-toggle="tooltip" data-placement="bottom" title="Particle System" class="gallery-thumbnail img-circle undraggable" src="img/projects/particles/thumbnail.png" alt="Particle System">
-                    </a>
-                </div>
-                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="8">
-                        <img data-toggle="tooltip" data-placement="bottom" title="Sudoku Solver" class="gallery-thumbnail img-circle undraggable" src="img/projects/sudoku/main.png" alt="Sudoku Solver">
-                    </a>
-                </div>
-                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="9">
-                        <img data-toggle="tooltip" data-placement="bottom" title="Maze Generator" class="gallery-thumbnail img-circle undraggable" src="img/projects/mazemaker/thumbnail.png" alt="Maze Generator">
-                    </a>
-                </div>
-                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="10">
-                        <img data-toggle="tooltip" data-placement="bottom" title="Dynamic Terrain" class="gallery-thumbnail img-circle undraggable" src="img/projects/terrain/main.png" alt="Dynamic Terrain">
-                    </a>
-                </div>
-                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="11">
-                        <img data-toggle="tooltip" data-placement="bottom" title="Rock-Paper-Scissors AI" class="gallery-thumbnail img-circle undraggable" src="img/projects/rps/thumbnail.png" alt="Rock-Paper-Scissors AI">
-                    </a>
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">Pathfinding Algorithm Comparison</h2>
+                    <p class="text-muted">
+                        An exploration of various pathfinding algorithms and the traits of each.
+                        This program allows for the creation of identical obstacle courses of variable
+                        size that several algorithms can then traverse simultaneously. The interface
+                        gives the user easy editing and viewing capabilities, mirroring all edits to
+                        the obstacles grids for all algorithms and allowing step-by-step or continuous
+                        execution of the algorithms in action.
+                    </p>
+                    <p class="text-muted">
+                        Weighted graphs are supported, with the ability to give different cells travel costs.
+                        Several preset obstacle setups can also be randomly generated, including mazes, gradients,
+                        and random fields.
+                    </p>
+                    <p class="text-muted">
+                        Included algorithms are Dijkstra's algorithm, three variations of A* search, breadth-first search,
+                        and greedy best-first search. Additional algorithms can be added through by implementing
+                        a template interface.
+                    </p>
+                    <p class="text-muted">
+                        The motivation for this project was familiarization and examination of available algorithms,
+                        seeing implementation and performance benefits of each. It was also one of the first uses
+                        of <a class="gallery-button" data-gallery-button-id="0">SFGrid</a>'s Java port.
+                    </p>
+                    <p>
+                        <a href="https://github.com/veylence/PathfindingComparison" target="_blank"><strong>View this project on Github</strong></a>
+                    </p>
                 </div>
             </div>
-        </div>
 
-        <!----------------- 2nd Row Projects ----------------->
+            <!-- Project 2 -->
+            <div class="gallery-section" data-gallery-id="2" data-open="false">
+                <div class="center-block project-images">
+                    <img class="gallery-main-image img-responsive lazy" data-src="img/projects/battleship/main.png" alt="Battleship AI" title="Battleship AI">
+                    <noscript><img class="gallery-main-image img-responsive" src="img/projects/battleship/main.png" alt="Battleship AI" title="Battleship AI"></noscript>
+                </div>
 
-        <!-- Project 6 -->
-        <div class="gallery-section" data-gallery-id="6" data-open="false">
-            <div class="center-block project-images">
-                <img class="gallery-main-image img-responsive lazy" data-src="img/projects/minesweeper/main.png" alt="Minesweeper Clone" title="Minesweeper Clone">
-                <noscript><img class="gallery-main-image img-responsive" src="img/projects/minesweeper/main.png" alt="Minesweeper Clone" title="Minesweeper Clone"></noscript>
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">Battleship AI</h2>
+                    <p class="text-muted">
+                        An attempt at creating an optimal artificial intelligence for playing the game of Battleship. Several bots, each empoying a unique approach, were developed along with the game manager. The tournament manager that runs testing of these bots features adjustable game parameters and presets for various board sizes, ship fleets, along with round-robin tournament play with stat tracking.
+                    </p>
+                    <p class="text-muted">
+                        This project also built on an improved version of the tournament management framework created for the <a class="gallery-button" data-gallery-button-id="11">Rock-Paper-Scissors AI testing program</a>.
+                    </p>
+                </div>
             </div>
 
-            <div class="gallery-project-details">
-                <h2 class="section-heading">Minesweeper Clone</h2>
-                <p class="text-muted">
-                    A faithful reproduction of Minesweeper, gameplay and interactibility wise. Features puzzle generation (with customizable parameters), score/time tracker, and auto-solving capabilities.
-                </p>
-                <p class="text-muted">
-                    Puzzle generation is achieved by initializing a random board after the player's first guess, then automatically solving it. If an unwinnable position is reached, mine placements are swapped so that the game can be won without any guessing necessary.
-                </p>
-                <p class="text-muted">
-                    This project was also one of the first uses of <a class="gallery-button" data-gallery-button-id="0">SFGrid</a>, testing its graphical capabilities and multi-layering use.
-                </p>
-            </div>
-        </div>
+            <!-- Project 3 -->
+            <div class="gallery-section" data-gallery-id="3" data-open="false">
+                <div class="center-block project-images">
+                    <img class="gallery-main-image img-responsive lazy" data-src="img/projects/3d/main.png" alt="Riemann Sum Visualizer" title="Riemann Sum Visualizer">
+                    <noscript><img class="gallery-main-image img-responsive" src="img/projects/3d/main.png" alt="Riemann Sum Visualizer" title="Riemann Sum Visualizer"></noscript>
+                    <div>
+                        <img class="gallery-image-display lazy" data-src="img/projects/3d/sub1.png" alt="Riemann Sum Visualizer 2" title="Riemann Sum Visualizer 2">
+                        <img class="gallery-image-display lazy" data-src="img/projects/3d/sub2.png" alt="Perspective Projection" title="Perspective Projection">
+                        <img class="gallery-image-display lazy" data-src="img/projects/3d/sub3.png" alt="TNB Frame Visualizer" title="TNB Frame Visualizer">
 
-        <!-- Project 7 -->
-        <div class="gallery-section" data-gallery-id="7" data-open="false">
-            <div class="center-block project-images">
-                <!-- "poster" will be displayed until the source is loaded (backup if it fails to load) -->
-                <video class="lazy" autoplay="autoplay" loop="loop" width="500" height="500" data-poster="img/projects/particles/main.png">
-                    <source data-src="img/projects/particles/particles.mp4" type="video/mp4" />
-                    <img class="gallery-main-image img-responsive" data-src="img/projects/particles/main.png" alt="Particle System" title="Particle System">
-                </video>
-                <noscript>
-                    <video autoplay="autoplay" loop="loop" width="500" height="500" poster="img/projects/particles/main.png">
-                        <source src="img/projects/particles/particles.mp4" type="video/mp4" />
-                        <img class="gallery-main-image img-responsive" src="img/projects/particles/main.png" alt="Particle System" title="Particle System">
+                        <noscript>
+                            <img class="gallery-image-display" src="img/projects/3d/sub1.png" alt="Riemann Sum Visualizer 2" title="Riemann Sum Visualizer 2">
+                            <img class="gallery-image-display" src="img/projects/3d/sub2.png" alt="Perspective Projection" title="Perspective Projection">
+                            <img class="gallery-image-display" src="img/projects/3d/sub3.png" alt="TNB Frame Visualizer" title="TNB Frame Visualizer">
+                        </noscript>
+                    </div>
+                </div>
+
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">3D Graphics and Visualizations</h2>
+                    <p class="text-muted">
+                        A graphics engine created as an application of 3D calculus and linear algebra skills and later utilized for visualization of 3D mathematical concepts. It allows for the rudimentary display of points in 3D space, with the additional option of connecting them into line segments.
+                    </p>
+                    <p class="text-muted">
+                        The engine works by simulating a movable 2D viewing plane to act as the camera. Points in space are then traced through the plane to the center of projection behind it. Points are then drawn using the coordinates of the line-plane intersections, producing the image for display. If line segments are being produced, an additional step is taken, identifying whether one of the two connected points is out of view and computing an intermediate point on the viewing plane if so.
+                    </p>
+                    <p class="text-muted">
+                        Several implementation of this program can be seen in the adjacent images, including a basic perspective projection, TNB frame visualizer, and Riemann sum approximator.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="gallery-section" data-gallery-id="4" data-open="false">
+                <div class="center-block project-images">
+                    <img class="gallery-main-image img-responsive lazy" data-src="img/projects/sorting/main.png" alt="Sorting Comparison" title="Sorting Comparison">
+                    <noscript><img class="gallery-main-image img-responsive" src="img/projects/sorting/main.png" alt="Sorting Comparison" title="Sorting Comparison"></noscript>
+                </div>
+
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">Sorting Algorithm Comparison</h2>
+                    <p class="text-muted">
+                        An exploration of various sorting algorithms and tradeoffs of each when given different data inputs. This program lets the user create a starting data set that can then be run through different algorithms while visually displaying the data array at each step. It also tracks and displays array accesses, comparisons, and modifications for quantitative analysis.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="gallery-section" data-gallery-id="5" data-open="false">
+                <div class="center-block project-images">
+                    <img class="gallery-main-image img-responsive lazy" data-src="img/projects/critters/main.png" alt="Critters AI and Analyzer" title="Critters AI and Analyzer">
+                    <noscript><img class="gallery-main-image img-responsive" src="img/projects/critters/main.png" alt="Critters AI and Analyzer" title="Critters AI and Analyzer"></noscript>
+                </div>
+
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">Critter Analyzer and AI</h2>
+                    <p class="text-muted">
+                        This is a collection of modified support files for the <a href="https://courses.cs.washington.edu/courses/cse143x/15au/homework/5/spec.pdf">Critters simulation</a>, created with the purpose of testing custom made Critter AI for the described tournament. It adds the ability to setup specific scenarios, as well as save and load setups to disk.
+                    </p>
+                    <p class="text-muted">
+                        Multiple game simulations can be ran in rapid succession to quickly evaluate the efficacy of different AI. This automated running ability has allowed for the inclusion of several genetic algorithm based critters that can evolve over several games, developing more efficient and complex strategies.
+                    </p>
+                    <p class="text-muted">
+                        This project also built on an improved version of the tournament management framework created for the <a class="gallery-button" data-gallery-button-id="11">Rock-Paper-Scissors AI testing program</a>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="container">
+                <div class="row text-center">
+                    <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="6">
+                            <img data-toggle="tooltip" data-placement="bottom" title="Minesweeper Clone" class="gallery-thumbnail img-circle undraggable" src="img/projects/minesweeper/thumbnail.png" alt="Minesweeper Clone">
+                        </a>
+                    </div>
+                    <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="7">
+                            <img data-toggle="tooltip" data-placement="bottom" title="Particle System" class="gallery-thumbnail img-circle undraggable" src="img/projects/particles/thumbnail.png" alt="Particle System">
+                        </a>
+                    </div>
+                    <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="8">
+                            <img data-toggle="tooltip" data-placement="bottom" title="Sudoku Solver" class="gallery-thumbnail img-circle undraggable" src="img/projects/sudoku/main.png" alt="Sudoku Solver">
+                        </a>
+                    </div>
+                    <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="9">
+                            <img data-toggle="tooltip" data-placement="bottom" title="Maze Generator" class="gallery-thumbnail img-circle undraggable" src="img/projects/mazemaker/thumbnail.png" alt="Maze Generator">
+                        </a>
+                    </div>
+                    <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="10">
+                            <img data-toggle="tooltip" data-placement="bottom" title="Dynamic Terrain" class="gallery-thumbnail img-circle undraggable" src="img/projects/terrain/main.png" alt="Dynamic Terrain">
+                        </a>
+                    </div>
+                    <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="11">
+                            <img data-toggle="tooltip" data-placement="bottom" title="Rock-Paper-Scissors AI" class="gallery-thumbnail img-circle undraggable" src="img/projects/rps/thumbnail.png" alt="Rock-Paper-Scissors AI">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!----------------- 2nd Row Projects ----------------->
+
+            <!-- Project 6 -->
+            <div class="gallery-section" data-gallery-id="6" data-open="false">
+                <div class="center-block project-images">
+                    <img class="gallery-main-image img-responsive lazy" data-src="img/projects/minesweeper/main.png" alt="Minesweeper Clone" title="Minesweeper Clone">
+                    <noscript><img class="gallery-main-image img-responsive" src="img/projects/minesweeper/main.png" alt="Minesweeper Clone" title="Minesweeper Clone"></noscript>
+                </div>
+
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">Minesweeper Clone</h2>
+                    <p class="text-muted">
+                        A faithful reproduction of Minesweeper, gameplay and interactibility wise. Features puzzle generation (with customizable parameters), score/time tracker, and auto-solving capabilities.
+                    </p>
+                    <p class="text-muted">
+                        Puzzle generation is achieved by initializing a random board after the player's first guess, then automatically solving it. If an unwinnable position is reached, mine placements are swapped so that the game can be won without any guessing necessary.
+                    </p>
+                    <p class="text-muted">
+                        This project was also one of the first uses of <a class="gallery-button" data-gallery-button-id="0">SFGrid</a>, testing its graphical capabilities and multi-layering use.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="gallery-section" data-gallery-id="7" data-open="false">
+                <div class="center-block project-images">
+                    <!-- "poster" will be displayed until the source is loaded (backup if it fails to load) -->
+                    <video class="lazy" autoplay="autoplay" loop="loop" width="500" height="500" data-poster="img/projects/particles/main.png">
+                        <source data-src="img/projects/particles/particles.mp4" type="video/mp4" />
+                        <img class="gallery-main-image img-responsive" data-src="img/projects/particles/main.png" alt="Particle System" title="Particle System">
                     </video>
-                </noscript>
+                    <noscript>
+                        <video autoplay="autoplay" loop="loop" width="500" height="500" poster="img/projects/particles/main.png">
+                            <source src="img/projects/particles/particles.mp4" type="video/mp4" />
+                            <img class="gallery-main-image img-responsive" src="img/projects/particles/main.png" alt="Particle System" title="Particle System">
+                        </video>
+                    </noscript>
+                </div>
+
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">Particle System</h2>
+                    <p class="text-muted">
+                        An adjustable particle system with parameters for emitter and particle positioning, movement, behavior, and visual customization.
+                    </p>
+                    <p class="text-muted">
+                        Optimized batching of vertex draw calls allows for steady performance even while updating and rendering 100,000's of particles. Swarming behavior is also implemented with having the particles homing in on the position of the mouse pointer.
+                    </p>
+                </div>
             </div>
 
-            <div class="gallery-project-details">
-                <h2 class="section-heading">Particle System</h2>
-                <p class="text-muted">
-                    An adjustable particle system with parameters for emitter and particle positioning, movement, behavior, and visual customization.
-                </p>
-                <p class="text-muted">
-                    Optimized batching of vertex draw calls allows for steady performance even while updating and rendering 100,000's of particles. Swarming behavior is also implemented with having the particles homing in on the position of the mouse pointer.
-                </p>
-            </div>
-        </div>
-
-        <!-- Project 8 -->
-        <div class="gallery-section" data-gallery-id="8" data-open="false">
-            <div class="center-block project-images">
-                <!-- "poster" will be displayed until the source is loaded (backup if it fails to load) -->
-                <video class="lazy" autoplay="autoplay" loop="loop" width="500" height="500" data-poster="img/projects/sudoku/main.png">
-                    <source data-src="img/projects/sudoku/sudoku.mp4" type="video/mp4" />
-                    <img class="gallery-main-image img-responsive" data-src="img/projects/sudoku/main.png" alt="Sudoku Solver" title="Sudoku Solver">
-                </video>
-                <noscript>
-                    <video autoplay="autoplay" loop="loop" width="500" height="500" poster="img/projects/sudoku/main.png">
-                        <source src="img/projects/sudoku/sudoku.mp4" type="video/mp4" />
-                        <img class="gallery-main-image img-responsive" src="img/projects/sudoku/main.png" alt="Sudoku Solver" title="Sudoku Solver">
+            <!-- Project 8 -->
+            <div class="gallery-section" data-gallery-id="8" data-open="false">
+                <div class="center-block project-images">
+                    <!-- "poster" will be displayed until the source is loaded (backup if it fails to load) -->
+                    <video class="lazy" autoplay="autoplay" loop="loop" width="500" height="500" data-poster="img/projects/sudoku/main.png">
+                        <source data-src="img/projects/sudoku/sudoku.mp4" type="video/mp4" />
+                        <img class="gallery-main-image img-responsive" data-src="img/projects/sudoku/main.png" alt="Sudoku Solver" title="Sudoku Solver">
                     </video>
-                </noscript>
+                    <noscript>
+                        <video autoplay="autoplay" loop="loop" width="500" height="500" poster="img/projects/sudoku/main.png">
+                            <source src="img/projects/sudoku/sudoku.mp4" type="video/mp4" />
+                            <img class="gallery-main-image img-responsive" src="img/projects/sudoku/main.png" alt="Sudoku Solver" title="Sudoku Solver">
+                        </video>
+                    </noscript>
+                </div>
+
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">Sudoku Solver</h2>
+                    <p class="text-muted">
+                        This program models the game of Sudoku for variable board sizes and is able to generate, display, and solve Sudoku puzzles. Parameters can adjust the refresh rate/solving speed as well as the puzzle size and difficulty. In the automated solving display, red numbers represent guesses filled in by the player, with orange cells representing illegal values that conflict with other filled in cells.
+                    </p>
+                    <p class="text-muted">
+                        This program was originally created for demonstration in the <a href="https://www.cs.washington.edu/143">CSE 143</a> course as a visual example of recursive backtracking.
+                    </p>
+                </div>
             </div>
 
-            <div class="gallery-project-details">
-                <h2 class="section-heading">Sudoku Solver</h2>
-                <p class="text-muted">
-                    This program models the game of Sudoku for variable board sizes and is able to generate, display, and solve Sudoku puzzles. Parameters can adjust the refresh rate/solving speed as well as the puzzle size and difficulty. In the automated solving display, red numbers represent guesses filled in by the player, with orange cells representing illegal values that conflict with other filled in cells.
-                </p>
-                <p class="text-muted">
-                    This program was originally created for demonstration in the <a href="https://www.cs.washington.edu/143">CSE 143</a> course as a visual example of recursive backtracking.
-                </p>
-            </div>
-        </div>
-
-        <!-- Project 9 -->
-        <div class="gallery-section" data-gallery-id="9" data-open="false">
-            <div class="center-block project-images">
-                <video class="lazy" autoplay="autoplay" loop="loop" width="500" height="500" data-poster="img/projects/mazemaker/main.png">
-                    <source data-src="img/projects/mazemaker/mazemaker.mp4" type="video/mp4" />
-                    <img class="gallery-main-image img-responsive" data-src="img/projects/mazemaker/main.png" alt="Maze Generator" title="Maze Generator">
-                </video>
-                <noscript>
-                    <video autoplay="autoplay" loop="loop" width="500" height="500" poster="img/projects/mazemaker/main.png">
-                        <source src="img/projects/mazemaker/mazemaker.mp4" type="video/mp4" />
-                        <img class="gallery-main-image img-responsive" src="img/projects/mazemaker/main.png" alt="Maze Generator" title="Maze Generator">
+            <!-- Project 9 -->
+            <div class="gallery-section" data-gallery-id="9" data-open="false">
+                <div class="center-block project-images">
+                    <video class="lazy" autoplay="autoplay" loop="loop" width="500" height="500" data-poster="img/projects/mazemaker/main.png">
+                        <source data-src="img/projects/mazemaker/mazemaker.mp4" type="video/mp4" />
+                        <img class="gallery-main-image img-responsive" data-src="img/projects/mazemaker/main.png" alt="Maze Generator" title="Maze Generator">
                     </video>
-                </noscript>
+                    <noscript>
+                        <video autoplay="autoplay" loop="loop" width="500" height="500" poster="img/projects/mazemaker/main.png">
+                            <source src="img/projects/mazemaker/mazemaker.mp4" type="video/mp4" />
+                            <img class="gallery-main-image img-responsive" src="img/projects/mazemaker/main.png" alt="Maze Generator" title="Maze Generator">
+                        </video>
+                    </noscript>
+                </div>
+
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">Maze Generator</h2>
+                    <p class="text-muted">
+                        This program generates mazes of customizable size while displaying the step-by-step process of creation. Tunnels are created in random directions until a dead end is reached, at which point the "tunneller" traces the path back to the first unexplored junction, repeating the process again.
+                    </p>
+                    <p class="text-muted">
+                        The maze is modelled by a simple bit field, with each position in the maze holding values of which adjacent walls have been tunnelled out and whether the cell is filled in, empty, or being explored. Draw calls are optimized by only repainting changed cells, allowing large dimension mazes to be created and animated without performance hits.
+                    </p>
+                    <p class="text-muted">
+                        This program was originally created for demonstration in the <a href="https://www.cs.washington.edu/143">CSE 143</a> course as a visual example of recursive backtracking.
+                    </p>
+                </div>
             </div>
 
-            <div class="gallery-project-details">
-                <h2 class="section-heading">Maze Generator</h2>
-                <p class="text-muted">
-                    This program generates mazes of customizable size while displaying the step-by-step process of creation. Tunnels are created in random directions until a dead end is reached, at which point the "tunneller" traces the path back to the first unexplored junction, repeating the process again.
-                </p>
-                <p class="text-muted">
-                    The maze is modelled by a simple bit field, with each position in the maze holding values of which adjacent walls have been tunnelled out and whether the cell is filled in, empty, or being explored. Draw calls are optimized by only repainting changed cells, allowing large dimension mazes to be created and animated without performance hits.
-                </p>
-                <p class="text-muted">
-                    This program was originally created for demonstration in the <a href="https://www.cs.washington.edu/143">CSE 143</a> course as a visual example of recursive backtracking.
-                </p>
-            </div>
-        </div>
-
-        <!-- Project 10 -->
-        <div class="gallery-section" data-gallery-id="10" data-open="false">
-            <div class="center-block project-images">
-                <video class="lazy" autoplay="autoplay" loop="loop" width="500" height="500" data-poster="img/projects/terrain/main.png">
-                    <source data-src="img/projects/terrain/terrain.mp4" type="video/mp4" />
-                    <img class="gallery-main-image img-responsive" data-src="img/projects/terrain/main.png" alt="Dynamic Terrain" title="Dynamic Terrain">
-                </video>
-                <noscript>
-                    <video autoplay="autoplay" loop="loop" width="500" height="500" poster="img/projects/terrain/main.png">
-                        <source src="img/projects/terrain/terrain.mp4" type="video/mp4" />
-                        <img class="gallery-main-image img-responsive" src="img/projects/terrain/main.png" alt="Dynamic Terrain" title="Dynamic Terrain">
+            <!-- Project 10 -->
+            <div class="gallery-section" data-gallery-id="10" data-open="false">
+                <div class="center-block project-images">
+                    <video class="lazy" autoplay="autoplay" loop="loop" width="500" height="500" data-poster="img/projects/terrain/main.png">
+                        <source data-src="img/projects/terrain/terrain.mp4" type="video/mp4" />
+                        <img class="gallery-main-image img-responsive" data-src="img/projects/terrain/main.png" alt="Dynamic Terrain" title="Dynamic Terrain">
                     </video>
-                </noscript>
-            </div>
-
-            <div class="gallery-project-details">
-                <h2 class="section-heading">Dynamic Terrain</h2>
-                <p class="text-muted">
-                    Dynamic 2D terrain that can be generated, raised, and destroyed. Functions using an underlying mesh that forms the terrain shape. A variation of explosion types and terrain physics are available, such as velocity based artillery and sheer-cliff collapsing.
-                </p>
-            </div>
-        </div>
-
-        <!-- Project 11 -->
-        <div class="gallery-section" data-gallery-id="11" data-open="false">
-            <div class="center-block project-images">
-                <img class="gallery-main-image img-responsive lazy" data-src="img/projects/rps/main.png" alt="Rock-Paper-Scissors AI" title="Rock-Paper-Scissors AI">
-                <noscript><img class="gallery-main-image img-responsive" src="img/projects/rps/main.png" alt="Rock-Paper-Scissors AI" title="Rock-Paper-Scissors AI"></noscript>
-            </div>
-
-            <div class="gallery-project-details">
-                <h2 class="section-heading">Rock-Paper-Scissors AI</h2>
-                <p class="text-muted">
-                    A collection of bots that play the game of Rock-Paper-Scissors (RPS) along with a tournament manager to fascilitate their testing and comparison. Creating competent AI for RPS is a challenge in statistical and pattern analysis, typically necessitating dynamic and adaptive strategies.
-                </p>
-                <p class="text-muted">
-                    Several bots were created, each employing unique strategies, including frequency analysis, history matching, pattern prediction through Markov chains, and metastrategy analysis and switching.
-                </p>
-                <p class="text-muted">
-                    The tournament manager allows for multiple game sets to be run in rapid succession to quickly evaluate the efficacy of the different AI strategies. This tournament framework created for this project has since been built on for the <a class="gallery-button" data-gallery-button-id="2">Battleship AI Manager</a> and <a class="gallery-button" data-gallery-button-id="5">Critter AI Analyzer</a>.
-                </p>
-            </div>
-        </div>
-
-        <!-- Row 3 -->
-        <div class="container">
-            <div class="row text-center">
-                <div class="gallery-project col-md-offset-4 col-sm-offset-2 col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="12">
-                        <img data-toggle="tooltip" data-placement="bottom" title="SPU Website Redesign" class="gallery-thumbnail img-circle undraggable" src="img/projects/spu/thumbnail.png" alt="SPU Website Redesign">
-                    </a>
+                    <noscript>
+                        <video autoplay="autoplay" loop="loop" width="500" height="500" poster="img/projects/terrain/main.png">
+                            <source src="img/projects/terrain/terrain.mp4" type="video/mp4" />
+                            <img class="gallery-main-image img-responsive" src="img/projects/terrain/main.png" alt="Dynamic Terrain" title="Dynamic Terrain">
+                        </video>
+                    </noscript>
                 </div>
-                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="13">
-                        <img data-toggle="tooltip" data-placement="bottom" title="Markov Text Generator" class="gallery-thumbnail img-circle undraggable" src="img/projects/markov/thumbnail.png" alt="Markov Text Generator">
-                    </a>
-                </div>
-            </div>
-        </div>
 
-        <!----------------- 3rd Row Projects ----------------->
-
-        <!-- Project 12 -->
-        <div class="gallery-section" data-gallery-id="12" data-open="false">
-            <div class="center-block project-images">
-                <img class="gallery-main-image img-responsive lazy" data-src="img/projects/spu/main.png" alt="SPU Website Redesign" title="SPU Website Redesign">
-                <noscript><img class="gallery-main-image img-responsive" src="img/projects/spu/main.png" alt="SPU Website Redesign" title="SPU Website Redesign"></noscript>
-            </div>
-
-
-            <div class="gallery-project-details">
-                <h2 class="section-heading">Seattle Public Utilities Website Redesign</h2>
-                <p class="text-muted">
-                    An interactive redesign of the Seattle Public Utilities website, created for INFO 200 as an exercise of design principles and processes. The new site has a focus on quick accessibility and access for several key services. The site also is also built to be mobile responsive to enable easy use when out in public.
-                </p>
-                <p class="text-muted">
-                    Features include a quick bill payment page, service management for bin monitoring and pickup, as well as quick links to schedules, maps, and FAQs.
-                </p>
-                <p>
-                    <a href="SPU/" target="_blank"><strong>View Demo Online</strong></a>
-                </p>
-            </div>
-        </div>
-
-        <!-- Project 13 -->
-        <div class="gallery-section" data-gallery-id="13" data-open="false">
-            <div class="center-block project-images">
-                <img class="gallery-main-image img-responsive lazy" data-src="img/projects/markov/main.png" alt="Markov Text Generator" title="Markov Text Generator">
-                <noscript><img class="gallery-main-image img-responsive" src="img/projects/markov/main.png" alt="Markov Text Generator" title="Markov Text Generator"></noscript>
-            </div>
-
-
-            <div class="gallery-project-details">
-                <h2 class="section-heading">Markov Chain Text Generator</h2>
-                <p class="text-muted">
-                    A text generator that produces a Markov chain for a collection of specified input texts. Using this model, text in the style of the input writing can be produced.
-                </p>
-                <p class="text-muted">
-                    The order of the chain is freely adjustable, and punctuation and capitalization can be set to be included, ignored, or interpreted as their own tokens in the model.
-                </p>
-            </div>
-        </div>
-
-        <!-- Row 1 -->
-        <div class="container">
-            <div class="row gallery-section-title">
-                <div class="col-lg-12 text-center">
-                    <h3 class="section-heading unselectable fancy-header">Art &amp; Design</h3>
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">Dynamic Terrain</h2>
+                    <p class="text-muted">
+                        Dynamic 2D terrain that can be generated, raised, and destroyed. Functions using an underlying mesh that forms the terrain shape. A variation of explosion types and terrain physics are available, such as velocity based artillery and sheer-cliff collapsing.
+                    </p>
                 </div>
             </div>
 
-            <div class="row text-center">
-                <div class="gallery-project col-md-offset-2 col-sm-offset-2 col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="14">
-                        <img data-toggle="tooltip" data-placement="bottom" title="Digital Painting" class="gallery-thumbnail img-circle undraggable" src="img/projects/painting/thumbnail.jpg" alt="Digital Painting">
-                    </a>
+            <!-- Project 11 -->
+            <div class="gallery-section" data-gallery-id="11" data-open="false">
+                <div class="center-block project-images">
+                    <img class="gallery-main-image img-responsive lazy" data-src="img/projects/rps/main.png" alt="Rock-Paper-Scissors AI" title="Rock-Paper-Scissors AI">
+                    <noscript><img class="gallery-main-image img-responsive" src="img/projects/rps/main.png" alt="Rock-Paper-Scissors AI" title="Rock-Paper-Scissors AI"></noscript>
                 </div>
 
-                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="15">
-                        <img data-toggle="tooltip" data-placement="bottom" title="Cardboard Art" class="gallery-thumbnail img-circle undraggable" src="img/projects/cardboard/thumbnail.png" alt="Cardboard Art">
-                    </a>
-                </div>
-
-                <div class="gallery-project col-md-offset-0 col-sm-offset-2 col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="16">
-                        <img data-toggle="tooltip" data-placement="bottom" title="Dog Water Ramp" class="gallery-thumbnail img-circle undraggable" src="img/projects/dogramp/thumbnail.png" alt="Dog Water Ramp">
-                    </a>
-                </div>
-
-                <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
-                    <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="17">
-                        <img data-toggle="tooltip" data-placement="bottom" title="" class="gallery-thumbnail img-circle undraggable" src="img/projects/workstool/main.png" alt="Work Stool">
-                    </a>
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">Rock-Paper-Scissors AI</h2>
+                    <p class="text-muted">
+                        A collection of bots that play the game of Rock-Paper-Scissors (RPS) along with a tournament manager to fascilitate their testing and comparison. Creating competent AI for RPS is a challenge in statistical and pattern analysis, typically necessitating dynamic and adaptive strategies.
+                    </p>
+                    <p class="text-muted">
+                        Several bots were created, each employing unique strategies, including frequency analysis, history matching, pattern prediction through Markov chains, and metastrategy analysis and switching.
+                    </p>
+                    <p class="text-muted">
+                        The tournament manager allows for multiple game sets to be run in rapid succession to quickly evaluate the efficacy of the different AI strategies. This tournament framework created for this project has since been built on for the <a class="gallery-button" data-gallery-button-id="2">Battleship AI Manager</a> and <a class="gallery-button" data-gallery-button-id="5">Critter AI Analyzer</a>.
+                    </p>
                 </div>
             </div>
-        </div>
 
-        <!----------------- 1st Row Projects ----------------->
+            <!-- Row 3 -->
+            <div class="container">
+                <div class="row text-center">
+                    <div class="gallery-project col-md-offset-4 col-sm-offset-2 col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="12">
+                            <img data-toggle="tooltip" data-placement="bottom" title="SPU Website Redesign" class="gallery-thumbnail img-circle undraggable" src="img/projects/spu/thumbnail.png" alt="SPU Website Redesign">
+                        </a>
+                    </div>
+                    <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="13">
+                            <img data-toggle="tooltip" data-placement="bottom" title="Markov Text Generator" class="gallery-thumbnail img-circle undraggable" src="img/projects/markov/thumbnail.png" alt="Markov Text Generator">
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Project 14 -->
-        <div class="gallery-section gallery-section-dark" data-gallery-id="14" data-open="false">
-            <div class="gallery-project-details">
-                <h2 class="section-heading text-muted">Digital Painting</h2>
-                <h3 class="section-subheading">
+            <!----------------- 3rd Row Projects ----------------->
+
+            <!-- Project 12 -->
+            <div class="gallery-section" data-gallery-id="12" data-open="false">
+                <div class="center-block project-images">
+                    <img class="gallery-main-image img-responsive lazy" data-src="img/projects/spu/main.png" alt="SPU Website Redesign" title="SPU Website Redesign">
+                    <noscript><img class="gallery-main-image img-responsive" src="img/projects/spu/main.png" alt="SPU Website Redesign" title="SPU Website Redesign"></noscript>
+                </div>
+
+
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">Seattle Public Utilities Website Redesign</h2>
+                    <p class="text-muted">
+                        An interactive redesign of the Seattle Public Utilities website, created for INFO 200 as an exercise of design principles and processes. The new site has a focus on quick accessibility and access for several key services. The site also is also built to be mobile responsive to enable easy use when out in public.
+                    </p>
+                    <p class="text-muted">
+                        Features include a quick bill payment page, service management for bin monitoring and pickup, as well as quick links to schedules, maps, and FAQs.
+                    </p>
+                    <p>
+                        <a href="SPU/" target="_blank"><strong>View Demo Online</strong></a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project 13 -->
+            <div class="gallery-section" data-gallery-id="13" data-open="false">
+                <div class="center-block project-images">
+                    <img class="gallery-main-image img-responsive lazy" data-src="img/projects/markov/main.png" alt="Markov Text Generator" title="Markov Text Generator">
+                    <noscript><img class="gallery-main-image img-responsive" src="img/projects/markov/main.png" alt="Markov Text Generator" title="Markov Text Generator"></noscript>
+                </div>
+
+
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">Markov Chain Text Generator</h2>
+                    <p class="text-muted">
+                        A text generator that produces a Markov chain for a collection of specified input texts. Using this model, text in the style of the input writing can be produced.
+                    </p>
+                    <p class="text-muted">
+                        The order of the chain is freely adjustable, and punctuation and capitalization can be set to be included, ignored, or interpreted as their own tokens in the model.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Row 1 -->
+            <div class="container">
+                <div class="row gallery-section-title">
+                    <div class="col-lg-12 text-center">
+                        <h3 class="section-heading unselectable fancy-header">Art &amp; Design</h3>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="gallery-project col-md-offset-2 col-sm-offset-2 col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="14">
+                            <img data-toggle="tooltip" data-placement="bottom" title="Digital Painting" class="gallery-thumbnail img-circle undraggable" src="img/projects/painting/thumbnail.jpg" alt="Digital Painting">
+                        </a>
+                    </div>
+
+                    <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="15">
+                            <img data-toggle="tooltip" data-placement="bottom" title="Cardboard Art" class="gallery-thumbnail img-circle undraggable" src="img/projects/cardboard/thumbnail.png" alt="Cardboard Art">
+                        </a>
+                    </div>
+
+                    <div class="gallery-project col-md-offset-0 col-sm-offset-2 col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="16">
+                            <img data-toggle="tooltip" data-placement="bottom" title="Dog Water Ramp" class="gallery-thumbnail img-circle undraggable" src="img/projects/dogramp/thumbnail.png" alt="Dog Water Ramp">
+                        </a>
+                    </div>
+
+                    <div class="gallery-project col-md-2 col-sm-4 col-xs-6">
+                        <a href="#projects-anchor" class="page-scroll-mobile gallery-button" data-gallery-button-id="17">
+                            <img data-toggle="tooltip" data-placement="bottom" title="" class="gallery-thumbnail img-circle undraggable" src="img/projects/workstool/main.png" alt="Work Stool">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!----------------- 1st Row Projects ----------------->
+
+            <!-- Project 14 -->
+            <div class="gallery-section gallery-section-dark" data-gallery-id="14" data-open="false">
+                <div class="gallery-project-details">
+                    <h2 class="section-heading text-muted">Digital Painting</h2>
+                    <h3 class="section-subheading">
                         Click on any image for the full resolution version.
                     </h3>
-            </div>
-            <div class="center-block project-images">
-                <a href="img/projects/painting/full/robot_remnant.jpg" target="_blank">
-                    <img class="painting-gallery-image img-responsive lazy" data-src="img/projects/painting/robot_remnant.jpg" alt="Robot Remnant" title="Robot Remnant">
-                    <noscript><img class="painting-gallery-image img-responsive" src="img/projects/painting/robot_remnant.jpg" alt="Robot Remnant" title="Robot Remnant"></noscript>
-                </a>
+                </div>
+                <div class="center-block project-images">
+                    <a href="img/projects/painting/full/robot_remnant.jpg" target="_blank">
+                        <img class="painting-gallery-image img-responsive lazy" data-src="img/projects/painting/robot_remnant.jpg" alt="Robot Remnant" title="Robot Remnant">
+                        <noscript><img class="painting-gallery-image img-responsive" src="img/projects/painting/robot_remnant.jpg" alt="Robot Remnant" title="Robot Remnant"></noscript>
+                    </a>
 
-                <a href="img/projects/painting/full/beach_island.jpg" target="_blank">
-                    <img class="painting-gallery-image img-responsive lazy" data-src="img/projects/painting/beach_island.jpg" alt="Beach Island" title="Beach Island">
-                    <noscript><img class="painting-gallery-image img-responsive" src="img/projects/painting/beach_island.jpg" alt="Beach Island" title="Beach Island"></noscript>
-                </a>
-                <a href="img/projects/painting/full/beach_island_steps.jpg" target="_blank">
-                    <img class="painting-gallery-image painting-gallery-image-steps img-responsive lazy" data-src="img/projects/painting/beach_island_steps.jpg" alt="Beach Island Steps" title="Beach Island Steps">
-                    <noscript><img class="painting-gallery-image painting-gallery-image-steps img-responsive" src="img/projects/painting/beach_island_steps.jpg" alt="Beach Island Steps" title="Beach Island Steps"></noscript>
-                </a>
+                    <a href="img/projects/painting/full/beach_island.jpg" target="_blank">
+                        <img class="painting-gallery-image img-responsive lazy" data-src="img/projects/painting/beach_island.jpg" alt="Beach Island" title="Beach Island">
+                        <noscript><img class="painting-gallery-image img-responsive" src="img/projects/painting/beach_island.jpg" alt="Beach Island" title="Beach Island"></noscript>
+                    </a>
+                    <a href="img/projects/painting/full/beach_island_steps.jpg" target="_blank">
+                        <img class="painting-gallery-image painting-gallery-image-steps img-responsive lazy" data-src="img/projects/painting/beach_island_steps.jpg" alt="Beach Island Steps" title="Beach Island Steps">
+                        <noscript><img class="painting-gallery-image painting-gallery-image-steps img-responsive" src="img/projects/painting/beach_island_steps.jpg" alt="Beach Island Steps" title="Beach Island Steps"></noscript>
+                    </a>
 
-                <a href="img/projects/painting/full/forest_tank.jpg" target="_blank">
-                    <img class="painting-gallery-image img-responsive lazy" data-src="img/projects/painting/forest_tank.jpg" alt="Forest Tank" title="Forest Tank">
-                    <noscript><img class="painting-gallery-image img-responsive" src="img/projects/painting/forest_tank.jpg" alt="Forest Tank" title="Forest Tank"></noscript>
-                </a>
+                    <a href="img/projects/painting/full/forest_tank.jpg" target="_blank">
+                        <img class="painting-gallery-image img-responsive lazy" data-src="img/projects/painting/forest_tank.jpg" alt="Forest Tank" title="Forest Tank">
+                        <noscript><img class="painting-gallery-image img-responsive" src="img/projects/painting/forest_tank.jpg" alt="Forest Tank" title="Forest Tank"></noscript>
+                    </a>
 
-                <a href="img/projects/painting/full/gasworks_beach.jpg" target="_blank">
-                    <img class="painting-gallery-image img-responsive lazy" data-src="img/projects/painting/gasworks_beach.jpg" alt="Gasworks Beach" title="Gasworks Beach">
-                    <noscript><img class="painting-gallery-image img-responsive" src="img/projects/painting/gasworks_beach.jpg" alt="Gasworks Beach" title="Gasworks Beach"></noscript>
-                </a>
+                    <a href="img/projects/painting/full/gasworks_beach.jpg" target="_blank">
+                        <img class="painting-gallery-image img-responsive lazy" data-src="img/projects/painting/gasworks_beach.jpg" alt="Gasworks Beach" title="Gasworks Beach">
+                        <noscript><img class="painting-gallery-image img-responsive" src="img/projects/painting/gasworks_beach.jpg" alt="Gasworks Beach" title="Gasworks Beach"></noscript>
+                    </a>
 
-                <a href="img/projects/painting/full/orb_piles.jpg" target="_blank">
-                    <img class="painting-gallery-image img-responsive lazy" data-src="img/projects/painting/orb_piles.jpg" alt="Orb Piles" title="Orb Piles">
-                    <noscript><img class="painting-gallery-image img-responsive" src="img/projects/painting/orb_piles.jpg" alt="Orb Piles" title="Orb Piles"></noscript>
-                </a>
-                <a href="img/projects/painting/full/orb_piles_steps.jpg" target="_blank">
-                    <img class="painting-gallery-image painting-gallery-image-steps img-responsive lazy" data-src="img/projects/painting/orb_piles_steps.jpg" alt="Orb Piles Steps" title="Orb Piles Steps">
-                    <noscript><img class="painting-gallery-image painting-gallery-image-steps img-responsive" src="img/projects/painting/orb_piles_steps.jpg" alt="Orb Piles Steps" title="Orb Piles Steps"></noscript>
-                </a>
+                    <a href="img/projects/painting/full/orb_piles.jpg" target="_blank">
+                        <img class="painting-gallery-image img-responsive lazy" data-src="img/projects/painting/orb_piles.jpg" alt="Orb Piles" title="Orb Piles">
+                        <noscript><img class="painting-gallery-image img-responsive" src="img/projects/painting/orb_piles.jpg" alt="Orb Piles" title="Orb Piles"></noscript>
+                    </a>
+                    <a href="img/projects/painting/full/orb_piles_steps.jpg" target="_blank">
+                        <img class="painting-gallery-image painting-gallery-image-steps img-responsive lazy" data-src="img/projects/painting/orb_piles_steps.jpg" alt="Orb Piles Steps" title="Orb Piles Steps">
+                        <noscript><img class="painting-gallery-image painting-gallery-image-steps img-responsive" src="img/projects/painting/orb_piles_steps.jpg" alt="Orb Piles Steps" title="Orb Piles Steps"></noscript>
+                    </a>
 
-                <div class="painting-gallery-end"></div>
-            </div>
-        </div>
-
-        <!-- Project 15 -->
-        <div class="gallery-section" data-gallery-id="15" data-open="false">
-            <div class="center-block project-images">
-                <img class="gallery-main-image img-responsive lazy" data-src="img/projects/cardboard/thumbnail.png" alt="Cardboard Art" title="Cardboard Art">
-                <noscript><img class="gallery-main-image img-responsive" src="img/projects/cardboard/thumbnail.png" alt="Cardboard Art" title="Cardboard Art"></noscript>
+                    <div class="painting-gallery-end"></div>
+                </div>
             </div>
 
-            <div class="gallery-project-details">
-                <h2 class="section-heading">Cardboard Art</h2>
-                <p class="text-muted">
-                    Cardboard models created using only 2-ply cardboard and glue.
-                </p>
-
-                <br/>
-
-                <p class="text-muted">
-                    <strong>View Full Pictures:</strong>
-                    <a href="img/projects/cardboard/full/Camera.png" target="_blank">Camera</a>,
-                    <a href="img/projects/cardboard/full/Microscope.png" target="_blank">Microscope</a>
-                </p>
-            </div>
-        </div>
-
-        <!-- Project 16 -->
-        <div class="gallery-section" data-gallery-id="16" data-open="false">
-            <div class="center-block project-images">
-                <img class="gallery-main-image img-responsive lazy" data-src="img/projects/dogramp/thumbnail.png" alt="Dog Water Ramp" title="Dog Water Ramp">
-                <noscript><img class="gallery-main-image img-responsive" src="img/projects/dogramp/thumbnail.png" alt="Dog Water Ramp" title="Dog Water Ramp"></noscript>
-
-                <div class="lazy">
-                    <img class="gallery-image-display" data-src="img/projects/dogramp/sub1.png" alt="Dog Ramp" title="Dog Ramp">
-                    <img class="gallery-image-display" data-src="img/projects/dogramp/sub2.png" alt="Dog Ramp Side View" title="Dog Ramp Side View">
-                    <img class="gallery-image-display" data-src="img/projects/dogramp/sub3.png" alt="Dog Ramp Collapsed" title="Dog Ramp Collapsed">
+            <!-- Project 15 -->
+            <div class="gallery-section" data-gallery-id="15" data-open="false">
+                <div class="center-block project-images">
+                    <img class="gallery-main-image img-responsive lazy" data-src="img/projects/cardboard/thumbnail.png" alt="Cardboard Art" title="Cardboard Art">
+                    <noscript><img class="gallery-main-image img-responsive" src="img/projects/cardboard/thumbnail.png" alt="Cardboard Art" title="Cardboard Art"></noscript>
                 </div>
 
-                <noscript>
-                    <img class="gallery-image-display" src="img/projects/dogramp/sub1.png" alt="Dog Ramp" title="Dog Ramp">
-                    <img class="gallery-image-display" src="img/projects/dogramp/sub2.png" alt="Dog Ramp Side View" title="Dog Ramp Side View">
-                    <img class="gallery-image-display" src="img/projects/dogramp/sub3.png" alt="Dog Ramp Collapsed" title="Dog Ramp Collapsed">
-                </noscript>
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">Cardboard Art</h2>
+                    <p class="text-muted">
+                        Cardboard models created using only 2-ply cardboard and glue.
+                    </p>
+
+                    <br/>
+
+                    <p class="text-muted">
+                        <strong>View Full Pictures:</strong>
+                        <a href="img/projects/cardboard/full/Camera.png" target="_blank">Camera</a>,
+                        <a href="img/projects/cardboard/full/Microscope.png" target="_blank">Microscope</a>
+                    </p>
+                </div>
             </div>
 
-            <div class="gallery-project-details">
-                <h2 class="section-heading">Dog Water Ramp</h2>
-                <p class="text-muted">
-                    A variable height dog ramp designed for water use, made out of repurposed wood. Hinges allow the ramp to float freely to a comfortable height and be collapsed for storage when not in use. Flotation devices can also be attached beneath the slope to adjust buoyancy.
-                </p>
-                <p class="text-muted">
-                    Swinging prongs on the land component allow the ramp to be hooked into deck gaps or solid ground for increased stability.
-                </p>
+            <!-- Project 16 -->
+            <div class="gallery-section" data-gallery-id="16" data-open="false">
+                <div class="center-block project-images">
+                    <img class="gallery-main-image img-responsive lazy" data-src="img/projects/dogramp/thumbnail.png" alt="Dog Water Ramp" title="Dog Water Ramp">
+                    <noscript><img class="gallery-main-image img-responsive" src="img/projects/dogramp/thumbnail.png" alt="Dog Water Ramp" title="Dog Water Ramp"></noscript>
 
-                <br/>
+                    <div class="lazy">
+                        <img class="gallery-image-display" data-src="img/projects/dogramp/sub1.png" alt="Dog Ramp" title="Dog Ramp">
+                        <img class="gallery-image-display" data-src="img/projects/dogramp/sub2.png" alt="Dog Ramp Side View" title="Dog Ramp Side View">
+                        <img class="gallery-image-display" data-src="img/projects/dogramp/sub3.png" alt="Dog Ramp Collapsed" title="Dog Ramp Collapsed">
+                    </div>
 
-                <p class="text-muted">
-                    <strong>View Full Pictures:</strong>
-                    <a href="img/projects/dogramp/full/thumbnail.jpg" target="_blank">Main View</a>,
-                    <a href="img/projects/dogramp/full/sub1.jpg" target="_blank">Main View 2</a>,
-                    <a href="img/projects/dogramp/full/sub2.jpg" target="_blank">Side and Underside</a>,
-                    <a href="img/projects/dogramp/full/sub3.jpg" target="_blank">Collapsed View</a>
-                </p>
+                    <noscript>
+                        <img class="gallery-image-display" src="img/projects/dogramp/sub1.png" alt="Dog Ramp" title="Dog Ramp">
+                        <img class="gallery-image-display" src="img/projects/dogramp/sub2.png" alt="Dog Ramp Side View" title="Dog Ramp Side View">
+                        <img class="gallery-image-display" src="img/projects/dogramp/sub3.png" alt="Dog Ramp Collapsed" title="Dog Ramp Collapsed">
+                    </noscript>
+                </div>
+
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">Dog Water Ramp</h2>
+                    <p class="text-muted">
+                        A variable height dog ramp designed for water use, made out of repurposed wood. Hinges allow the ramp to float freely to a comfortable height and be collapsed for storage when not in use. Flotation devices can also be attached beneath the slope to adjust buoyancy.
+                    </p>
+                    <p class="text-muted">
+                        Swinging prongs on the land component allow the ramp to be hooked into deck gaps or solid ground for increased stability.
+                    </p>
+
+                    <br/>
+
+                    <p class="text-muted">
+                        <strong>View Full Pictures:</strong>
+                        <a href="img/projects/dogramp/full/thumbnail.jpg" target="_blank">Main View</a>,
+                        <a href="img/projects/dogramp/full/sub1.jpg" target="_blank">Main View 2</a>,
+                        <a href="img/projects/dogramp/full/sub2.jpg" target="_blank">Side and Underside</a>,
+                        <a href="img/projects/dogramp/full/sub3.jpg" target="_blank">Collapsed View</a>
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <!-- Project 17 -->
-        <div class="gallery-section" data-gallery-id="17" data-open="false">
-            <div class="center-block project-images">
-                <img class="gallery-main-image img-responsive lazy" data-src="img/projects/workstool/main.png" alt="Work Stool" title="Work Stool">
-                <noscript><img class="gallery-main-image img-responsive" src="img/projects/workstool/main.png" alt="Work Stool" title="Work Stool"></noscript>
+            <!-- Project 17 -->
+            <div class="gallery-section" data-gallery-id="17" data-open="false">
+                <div class="center-block project-images">
+                    <img class="gallery-main-image img-responsive lazy" data-src="img/projects/workstool/main.png" alt="Work Stool" title="Work Stool">
+                    <noscript><img class="gallery-main-image img-responsive" src="img/projects/workstool/main.png" alt="Work Stool" title="Work Stool"></noscript>
+                </div>
+
+                <div class="gallery-project-details">
+                    <h2 class="section-heading">Work Stool</h2>
+                    <p class="text-muted">
+                        A work stool with lower holding compartment. Bevelled rim edges for comfortable handling.
+                    </p>
+
+                    <br/>
+                    <p class="text-muted">
+                        <strong>View Full Picture:</strong>
+                        <a href="img/projects/workstool/full/main.png" target="_blank">Work stool</a>
+                    </p>
+                </div>
             </div>
+        </section>
 
-            <div class="gallery-project-details">
-                <h2 class="section-heading">Work Stool</h2>
-                <p class="text-muted">
-                    A work stool with lower holding compartment. Bevelled rim edges for comfortable handling.
-                </p>
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <!-- Contact Me -->
+                <div class="subsection">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h2 class="section-heading">Contact Me</h2>
+                        </div>
+                    </div>
 
-                <br/>
-                <p class="text-muted">
-                    <strong>View Full Picture:</strong>
-                    <a href="img/projects/workstool/full/main.png" target="_blank">Work stool</a>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <!-- Contact Me -->
-            <div class="subsection">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">Contact Me</h2>
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <span class="text-muted">jchiang2@uw.edu</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <span class="text-muted">jchiang2@uw.edu</span>
+                <!-- Around the Web -->
+                <div class="subsection">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h2 class="section-heading">Around the Web</h2>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://github.com/veylence" target="_blank"><span data-toggle="tooltip" data-placement="bottom" title="Github" class="fa fa-github"></span></a></li>
+                            <li><a href="https://www.linkedin.com/in/jakechiang" target="_blank"><span data-toggle="tooltip" data-placement="bottom" title="Linkedin" class="fa fa-linkedin"></span></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Around the Web -->
-            <div class="subsection">
+        <footer>
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">Around the Web</h2>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="https://github.com/veylence" target="_blank"><span data-toggle="tooltip" data-placement="bottom" title="Github" class="fa fa-github"></span></a></li>
-                        <li><a href="https://www.linkedin.com/in/jakechiang" target="_blank"><span data-toggle="tooltip" data-placement="bottom" title="Linkedin" class="fa fa-linkedin"></span></a></li>
-                    </ul>
+                    <span class="copyright">Copyright &copy; Jake Chiang 2017</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </footer>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <span class="copyright">Copyright &copy; Jake Chiang 2017</span>
-            </div>
-        </div>
-    </footer>
+        <!-- Grid JavaScript -->
+        <script src="js/grid.js"></script>
 
-    <!-- Grid JavaScript -->
-    <script src="js/grid.js"></script>
+        <!-- Gallery JavaScript -->
+        <script src="js/gallery.js"></script>
 
-    <!-- Gallery JavaScript -->
-    <script src="js/gallery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/agency.js"></script>
-</body>
+        <!-- Theme JavaScript -->
+        <script src="js/agency.js"></script>
+    </body>
 
 </html>
