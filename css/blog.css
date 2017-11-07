@@ -1,0 +1,98 @@
+.navbar-title {
+    color: white;
+    font-size: 30px;
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 50px;
+    width: 100%;
+    margin-left: 20px;
+    /*    float: none;*/
+    /*    margin: 0 auto;*/
+    /*    position: absolute;*/
+    /*    text-align: center;*/
+    /*    left: 0;*/
+}
+
+.navbar-header a:hover,
+.navbar-header a:focus,
+.navbar-header a:active,
+.navbar-header a.active {
+    /* Prevent link hover effects for homepage brand link */
+    color: transparent;
+}
+
+#blog-content {
+    width: 60%;
+}
+
+#blog-content p {
+    text-align: justify;
+    font-size: 13pt;
+/*    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.back-button {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    text-decoration: none;
+    color: #1f6db1;
+}
+
+.blog-header {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    text-transform: none;
+    margin-top: 30px;
+}
+
+.blog-section-header {
+    font-family: "Montserrat", sans-serif;
+    text-transform: none;
+}
+
+#blog-toc-list {
+    list-style-type: none;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#blog-post-toc-list {
+    font-size: 14pt;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-family: "Miriam Libre", sans-serif;
+}
+
+.blog-toc-item {
+    font-size: 12pt;
+    line-height: 17pt;
+}
+
+.blog-toc-item:before {
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    content: "\0226B";
+    margin-right: 7px;
+}
+
+.info-footer {
+    font-style: italic;
+    color: #777777;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.img-centered {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.row .img-centered {
+    margin: 0;
+}

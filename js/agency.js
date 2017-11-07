@@ -86,13 +86,13 @@
     //Enable all tooltips
     $(document).ready(function () {
         // Hide navbar until the page is sufficiently scrolled
-        $(".navbar").hide();
+        $(".navbar-hide").hide();
         $(function () {
             $(window).scroll(function () {
                 if ($(this).scrollTop() > NAVBAR_HIDE_HEIGHT) {
-                    $(".navbar").fadeIn();
+                    $(".navbar-hide").fadeIn();
                 } else {
-                    $(".navbar").fadeOut();
+                    $(".navbar-hide").fadeOut();
                 }
             });
         });
