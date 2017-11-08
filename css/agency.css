@@ -284,12 +284,15 @@ header {
     /*    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url("../img/SiteBackground.png");*/
     /*    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url("../img/InvertedLargeMeshWhite.png"), linear-gradient(60deg, rgba(230, 34, 208, 0.9), rgba(158, 32, 224, 0.9), rgba(32, 180, 224, 0.9), rgba(128, 224, 32, 0.9), rgba(209, 234, 18, 0.9));*/
     /*    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../img/InvertedLargeMeshWhite.png"), linear-gradient(60deg, rgba(230, 34, 208, 0.9), rgba(158, 32, 224, 0.9), rgba(32, 180, 224, 0.9), rgba(128, 224, 32, 0.9), rgba(209, 234, 18, 0.9));*/
+    /*
     background: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../img/InvertedLargeMeshWhite.png"), -webkit-linear-gradient(60deg, rgba(230, 34, 208, 0.9), rgba(158, 32, 224, 0.9), rgba(32, 180, 224, 0.9), rgba(128, 224, 32, 0.9), rgba(209, 234, 18, 0.9));
     background: -o-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../img/InvertedLargeMeshWhite.png"), -o-linear-gradient(60deg, rgba(230, 34, 208, 0.9), rgba(158, 32, 224, 0.9), rgba(32, 180, 224, 0.9), rgba(128, 224, 32, 0.9), rgba(209, 234, 18, 0.9));
     background: -moz-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../img/InvertedLargeMeshWhite.png"), -moz-linear-gradient(60deg, rgba(230, 34, 208, 0.9), rgba(158, 32, 224, 0.9), rgba(32, 180, 224, 0.9), rgba(128, 224, 32, 0.9), rgba(209, 234, 18, 0.9));
     background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 1)), url("../img/InvertedLargeMeshWhite.png"), linear-gradient(60deg, rgba(230, 34, 208, 0.9), rgba(158, 32, 224, 0.9), rgba(32, 180, 224, 0.9), rgba(128, 224, 32, 0.9), rgba(209, 234, 18, 0.9));
-    background-size: cover, 75px;
-    background-repeat: repeat;
+*/
+    /*    background-size: cover, 75px;*/
+    /*    background-repeat: repeat;*/
+    background-size: cover;
     /*    background-color: lightgray;*/
     /*    background-repeat: no-repeat;*/
     background-attachment: scroll;
@@ -328,9 +331,11 @@ header .intro-text {
 }
 
 #name-header {
-    font-family: "Raleway", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 15px;
+/*    font-family: "Raleway", sans-serif;*/
+    font-family: "Roboto Slab", sans-serif;
+    text-transform: none;
+/*    letter-spacing: 15px;*/
+    letter-spacing: 10px;
     color: black;
 }
 
@@ -339,12 +344,12 @@ header .intro-text {
 }
 
 .section-buttons {
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 @media (min-width: 768px) {
     .section-buttons {
-        margin-top: 220px;
+        margin-top: 150px;
     }
 }
 
@@ -802,10 +807,18 @@ img::-moz-selection {
 }
 
 #resume-link div:hover {
+    /*
     color: #4c90cb;
     border-color: #4c90cb;
+*/
+    color: #179ff4;
+    border-color: #179ff4;
+    background-color: #fafafa;
     font-weight: bold;
-    text-decoration: underline;
+    /*    text-decoration: underline;*/
+    color: white;
+    background-color: #4c90cb;
+    border-color: #4c90cb;
 }
 
 .gallery-section {

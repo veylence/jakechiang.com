@@ -3,7 +3,8 @@
 (function ($) {
     "use strict"; // Start of use strict
 
-    var NAVBAR_HIDE_HEIGHT = 150;
+//    var NAVBAR_HIDE_HEIGHT = 150;
+    var NAVBAR_HIDE_HEIGHT = 240;
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $("a.page-scroll").bind("click", function (event) {
