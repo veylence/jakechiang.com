@@ -644,6 +644,11 @@ img::-moz-selection {
     background: transparent;
 }
 
+.navbar-hide {
+    /* Hide navbar until the page is sufficiently scrolled */
+    display: none;
+}
+
 
 /********************************************/
 
@@ -1063,7 +1068,10 @@ video.lazy {
     display: none;
 }
 
+
 /* Covers the background image until its done loading */
+
+
 /*
 .background-cover {
     position: relative;

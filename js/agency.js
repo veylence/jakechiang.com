@@ -3,7 +3,7 @@
 (function ($) {
     "use strict"; // Start of use strict
 
-//    var NAVBAR_HIDE_HEIGHT = 150;
+    //    var NAVBAR_HIDE_HEIGHT = 150;
     var NAVBAR_HIDE_HEIGHT = 240;
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -84,19 +84,22 @@
     ////        $(this).css("-webkit-filter", "brightness(0%) invert(100%)");
     //    });
 
+    function updateNavbarVisibility() {
+        if ($(this).scrollTop() > NAVBAR_HIDE_HEIGHT) {
+            $(".navbar-hide").fadeIn();
+        } else {
+            $(".navbar-hide").fadeOut();
+        }
+    }
+
     //Enable all tooltips
     $(document).ready(function () {
         // Hide navbar until the page is sufficiently scrolled
         $(".navbar-hide").hide();
         $(function () {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > NAVBAR_HIDE_HEIGHT) {
-                    $(".navbar-hide").fadeIn();
-                } else {
-                    $(".navbar-hide").fadeOut();
-                }
-            });
+            $(window).scroll(updateNavbarVisibility);
         });
+        updateNavbarVisibility();
 
         $('[data-toggle="tooltip"]').tooltip();
 
