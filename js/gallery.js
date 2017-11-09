@@ -7,6 +7,13 @@
     var openProjectId = -1;
 
     $(document).ready(function () {
+        // Begin with all videos paused
+        for(var i = 0; i < $(".gallery-section video").length; i++) {
+            $(".gallery-section video").get(i).onloadstart = function() {
+                this.pause();
+            };
+        }
+        
         //TODO Make more responsible to fast consecutive clicks
         $(".gallery-button").click(function (event) {
             var id = $(this).attr("data-gallery-button-id");
@@ -30,6 +37,11 @@
                         height: expandHeight
                     }, ANIMATE_TIME);
 
+                    // Play video when section is opened
+                    if ($(gallerySection).find("video").length) {
+                        $(gallerySection).find("video").get(0).play();
+                    }
+
                     //Set this gallery section as "open"
                     $(gallerySection).attr("data-open", "true");
                     openProjectId = id;
@@ -44,6 +56,11 @@
                         height: 0
                     }, ANIMATE_TIME);
 
+                    // Pause video when section is closed
+                    if ($(gallerySection).find("video").length) {
+                        $(gallerySection).find("video").get(0).pause();
+                    }
+                    
                     //Set this gallery section as "closed"
                     $(gallerySection).attr("data-open", "false");
                     if ($(gallerySection).attr("data-gallery-id") == id) {
