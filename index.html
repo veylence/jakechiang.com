@@ -7,6 +7,12 @@
        A backup of the regular tag should be put in a <noscript> block as a backup.
        
     == New images should have their size minimized before being added.
+    
+    TODO: Add trianglify fade in
+    TODO: Add version/random strings to end of files to force cache updates
+    TODO: Remove old projects
+    TODO: Add "writings" section to main page that can be commented in
+    TODO: Set <title> tags of blog pages
     <------ ----------------- ----->
 
     <head>
@@ -50,7 +56,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-<!--        <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">-->
+        <!--        <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">-->
         <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:400,700" rel="stylesheet">
 
         <!-- Theme CSS -->
@@ -149,7 +155,7 @@
 
             <div class="container">
                 <div class="intro-text">
-                    <span id="name-header" class="unselectable">Jake<br/>Chiang</span>
+                    <span id="name-header">Jake<br/>Chiang</span>
                     <div class="section-buttons">
                         <div class="row text-center">
                             <div class="col-sm-4 col-xs-12 col-sm-offset-4">
@@ -921,6 +927,31 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.2.0/trianglify.min.js"></script>
         <script>
+            var backgroundTrianglifyImage = undefined;
+
+            function getCssValuePrefix() {
+                var prefix = ''; // Default to standard
+                var prefixes = ['-o-', '-ms-', '-moz-', '-webkit-'];
+
+                // Create a temporary DOM object for testing
+                var dom = document.createElement('div');
+
+                for (var i = 0; i < prefixes.length; i++) {
+                    // Attempt to set the style
+                    dom.style.background = prefixes[i] + 'linear-gradient(#000000, #ffffff)';
+
+                    // Detect if the style was successfully set
+                    if (dom.style.background) {
+                        prefix = prefixes[i];
+                    }
+                }
+
+                dom = null;
+                delete dom;
+
+                return prefix;
+            }
+
             function setBackground() {
                 var pattern = Trianglify({
                     height: $("#header").height(),
@@ -936,36 +967,14 @@
                     seed: "jake"
                 });
 
-                function getCssValuePrefix() {
-                    var prefix = ''; // Default to standard
-                    var prefixes = ['-o-', '-ms-', '-moz-', '-webkit-'];
-
-                    // Create a temporary DOM object for testing
-                    var dom = document.createElement('div');
-
-                    for (var i = 0; i < prefixes.length; i++) {
-                        // Attempt to set the style
-                        dom.style.background = prefixes[i] + 'linear-gradient(#000000, #ffffff)';
-
-                        // Detect if the style was successfully set
-                        if (dom.style.background) {
-                            prefix = prefixes[i];
-                        }
-                    }
-
-                    dom = null;
-                    delete dom;
-
-                    return prefix;
-                }
-
-                document.getElementById("header").style.backgroundImage = getCssValuePrefix() + "linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(" + pattern.png() + ")";
+                //                document.getElementById("header").style.backgroundImage = getCssValuePrefix() + "linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(" + pattern.png() + ")";
+                backgroundTrianglifyImage = pattern.png();
             }
 
             var shouldUpdateBackground = true;
             var backgroundUpdateSleeping = false;
 
-            // Limit background updates to 1 every 250 milliseconds
+            // Limit background updates to 1 every 500 milliseconds
             setInterval(function() {
                 if (shouldUpdateBackground && !backgroundUpdateSleeping) {
                     setBackground();
@@ -974,13 +983,29 @@
                     backgroundUpdateSleeping = true;
                     setTimeout(function() {
                         backgroundUpdateSleeping = false;
-                    }, 250);
+                    }, 500);
                 }
             }, 5);
 
             $(window).resize(function() {
                 shouldUpdateBackground = true;
             });
+
+            // Fade in background image once it's loaded
+            var stepSize = 1.0 / 150.0;
+            var opacity = 1.0;
+            setInterval(function() {
+                if (backgroundTrianglifyImage !== undefined) {
+                    if (opacity > 0) {
+                        opacity -= stepSize;
+                    } else {
+                        opacity = 0;
+                    }
+                    var rgba = "rgba(255, 255, 255, " + opacity + "), ";
+                    //                    document.getElementById("header").style.backgroundImage = getCssValuePrefix() + "linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(" + backgroundTrianglifyImage + ")";
+                    document.getElementById("header").style.backgroundImage = getCssValuePrefix() + "linear-gradient(" + rgba + rgba + rgba + rgba + "rgba(255, 255, 255, 1)), url(" + backgroundTrianglifyImage + ")";
+                }
+            }, 5);
             //            document.getElementById("header").style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(" + pattern.png() + ")";
             //            document.getElementById("header").style.backgroundImage = "url(" + pattern.png() + ")";
 

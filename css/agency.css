@@ -331,10 +331,10 @@ header .intro-text {
 }
 
 #name-header {
-/*    font-family: "Raleway", sans-serif;*/
+    /*    font-family: "Raleway", sans-serif;*/
     font-family: "Roboto Slab", sans-serif;
     text-transform: none;
-/*    letter-spacing: 15px;*/
+    /*    letter-spacing: 15px;*/
     letter-spacing: 10px;
     color: black;
 }
@@ -798,7 +798,7 @@ img::-moz-selection {
     display: inline-block;
     padding: 15px 10px 15px 10px;
     /*    border: 1px solid #4c90cb;*/
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 100%;
 }
 
@@ -1062,3 +1062,22 @@ img.lazy {
 video.lazy {
     display: none;
 }
+
+/* Covers the background image until its done loading */
+/*
+.background-cover {
+    position: relative;
+}
+
+.background-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+*/
