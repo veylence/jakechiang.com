@@ -80,6 +80,16 @@
             fixOpenSectionSize();
         });
     });
+    
+    // Fix painting gallery size as images load
+    $(".painting-gallery-image").bind("load", function() {
+        fixOpenSectionSize();
+    })
+//        .each(function() {
+//        if(this.complete) {
+//            $(this).load();
+//        }
+//    });
 
     function fixOpenSectionSize() {
         var gallerySections = $(".gallery-section");
