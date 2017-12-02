@@ -1,3 +1,8 @@
+#blog-toc-list {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
 textarea {
     width: 100%;
     resize: none;
@@ -21,8 +26,17 @@ textarea {
     margin-top: 20px;
 }
 
-.btn-info, .btn-success {
+.btn-info, .btn-success, .btn-danger {
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
+}
+
+.footer-spacer {
+    margin-bottom: 150px
+}
+
+#toc {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13pt;
 }

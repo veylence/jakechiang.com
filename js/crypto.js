@@ -1,74 +1,128 @@
-//TODO: Make more efficient: don't recreate the entire map each time (?) may not be possible
-
 (function () {
     "use strict";
 
-    var FREQ = ["e", "t", "a", "o", "i", "n", "s", "h", "r", "d", "l", "c", "u", "m", "w", "f", "g", "y", "p", "b", "v", "k", "j", "x", "q", "z"];
+    const NGRAM_SIZE = 4;
 
+    var ngramData = {};
+    var floor;
+    var countSum;
 
-    $("#freq-input").on("input propertychange", function () {
-        var input = $("#freq-input").val();
+    document.onready = function () {
+        loadNGrams();
         
-        input = input.replace(/[^a-zA-Z ]/g, '');
-        input = input.toLowerCase();
+        document.getElementById("caesar-cipher-encipher").onclick = caesarCipherEncipher;
+        document.getElementById("caesar-cipher-decipher").onclick = caesarCipherDecipher;
+        document.getElementById("caesar-cipher-break").onclick = caesarCipherBreak;
+    }
+    
+    function loadNGrams() {
+        countSum = 0;
 
-        if (input == "") {
-            var output = "";
-        } else {
-            var freq = getFrequency(input);
-            var sortedFreq = sort(freq);
-            var replaceMap = getReplaceMap(sortedFreq);
-            var output = mapReplace(input, replaceMap);
+        var i = 0;
+        while (i < NGRAMS.length) {
+            var ngram = "";
+            var count = "";
+
+            // Parse ngram
+            for (var j = 0; j < NGRAM_SIZE; j++) {
+                ngram += NGRAMS.charAt(i + j);
+            }
+            i += NGRAM_SIZE;
+
+            // Parse count
+            var c = NGRAMS.charAt(i);
+            while (c >= '0' && c <= '9') {
+                count += c;
+                i++;
+                c = NGRAMS.charAt(i);
+            }
+            var countNum = parseInt(count);
+            countSum += countNum;
+
+            // Add to map
+            ngramData[ngram] = countNum;
         }
 
-        $("#freq-output").val(output);
-    });
-
-    function mapReplace(str, replaceMap) {
-        delete replaceMap[" "]; //Preserve spaces
-        
-        var regex = new RegExp(Object.keys(replaceMap).join("|"), "g");
-        return str.replace(regex, function (m) {
-            return replaceMap[m];
-        });
-    }
-
-    function getReplaceMap(freq) {
-        var replaceMap = {};
-
-        for (var i = 0; i < freq.length; i++) {
-            replaceMap[freq[i]] = FREQ[i];
+        for (var ngram in ngramData) {
+            ngramData[ngram] = Math.log10(ngramData[ngram] / countSum);
         }
-
-        return replaceMap;
+        floor = Math.log10(0.01 / countSum);
     }
 
-    function sort(freq) {
-        var sorted = Object.keys(freq).sort(function (a, b) {
-            return freq[b] - freq[a];
-        });
-
-        return sorted;
-    }
-
-    function getFrequency(str) {
-        var freq = {};
-
-        for (var i = 0; i < str.length; i++) {
-            var char = str.charAt(i);
-
-            if (freq[char]) {
-                freq[char]++;
+    function score(text) {
+        text = text.toUpperCase();
+        
+        var score = 0;
+        for (var i = 0; i < text.length - NGRAM_SIZE + 1; i++) {
+            var ngram = "";
+            for (var j = 0; j < NGRAM_SIZE; j++) {
+                ngram += text.charAt(i + j);
+            }
+            if (ngram in ngramData) {
+                score += ngramData[ngram];
             } else {
-                freq[char] = 1;
+                score += floor;
             }
         }
-
-        return freq;
+        return score;
     }
-
-    //From https://stackoverflow.com/questions/3446170/
-    function escapeRegExp(str) {
-        return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+    
+    function caesarCipherEncipher() {
+        var shift = document.getElementById("caesar-cipher-key").value;
+        if(isNaN(shift) || shift === "") {
+            flash("caesar-cipher-error");
+            showError("caesar-cipher-error", "An integer shift value must be given.");
+            flash("caesar-cipher-key");
+        } else {
+            var plaintext = document.getElementById("caesar-cipher-plaintext").value;
+            var ciphertext = caesarCipher(plaintext, parseInt(shift)).toUpperCase();
+            document.getElementById("caesar-cipher-ciphertext").value = ciphertext;
+            flash("caesar-cipher-ciphertext");
+        }
+    }
+    
+    function caesarCipherDecipher() {
+        var shift = document.getElementById("caesar-cipher-key").value;
+        if(isNaN(shift) || shift === "") {
+            flash("caesar-cipher-error");
+            showError("caesar-cipher-error", "An integer shift value must be given.");
+            flash("caesar-cipher-key");
+        } else {
+            var ciphertext = document.getElementById("caesar-cipher-ciphertext").value;
+            var plaintext = caesarCipher(ciphertext, -parseInt(shift)).toLowerCase();
+            document.getElementById("caesar-cipher-plaintext").value = plaintext;
+            flash("caesar-cipher-plaintext");
+        }
+    }
+    
+    function caesarCipher(input, shift) {
+        input = input.replace(/[^a-zA-Z]/g, "").toLowerCase();
+        
+        var output = ""
+        for(var i = 0; i < input.length; i++) {
+            var c = input.charCodeAt(i);
+            output += String.fromCharCode((((c - 97) + shift) % 26 + 26) % 26 + 97);
+        }
+        
+        clearError("caesar-cipher-error");
+        return output;
+    }
+    
+    function caesarCipherBreak() {
+        clearError("caesar-cipher-error");
+    }
+    
+    function flash(id) {
+        $("#" + id).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+    }
+    
+    function showError(id, message) {
+        var alertBox = document.getElementById(id);
+        alertBox.innerHTML = "<strong>Error:</strong> " + message
+        alertBox.style.display = "block";
+    }
+    
+    function clearError(id) {
+        document.getElementById(id).style.display = "none";
     }
 })();

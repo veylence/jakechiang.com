@@ -48,7 +48,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <!--    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-<!--        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>-->
+        <!--        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>-->
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:400,700" rel="stylesheet">
@@ -126,9 +126,9 @@
 
         <div id="blog-content" class="container">
             <h1 class="page-header blog-header">Cryptanalysis Tools</h1>
-            <ul id="blog-toc-list">
-                <li class="blog-toc-item"><a href="#caesar-cipher">Caesar Cipher</a></li>
-                <li class="blog-toc-item"><a href="#simple-substitution-cipher">Substitution Cipher</a></li>
+            <ul id="toc">
+                <li><a href="#caesar-cipher">Caesar Cipher</a></li>
+                <li><a href="#simple-substitution-cipher">Substitution Cipher</a></li>
             </ul>
         </div>
 
@@ -136,34 +136,45 @@
             <h2 id="caesar-cipher" class="section-header blog-section-header page-header">Caesar Cipher</h2>
 
             <div class="row">
+                <div id="caesar-cipher-error" class="alert alert-danger" role="alert" style="display: none;">
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-xs-6">
                     <div class="plaintext-area input-group">
                         <span class="textarea-header">Plaintext</span>
-                        <textarea rows=10 class="form-control"></textarea>
+                        <textarea id="caesar-cipher-plaintext" rows=10 class="form-control"></textarea>
                     </div>
                 </div>
                 <div class="col-xs-6">
                     <div class="ciphertext-area input-group">
                         <span class="textarea-header">Ciphertext</span>
-                        <textarea rows=10 class="form-control"></textarea>
+                        <textarea id="caesar-cipher-ciphertext" rows=10 class="form-control"></textarea>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="key-area col-xs-12">
                     <div class="input-group">
-                        <span class="input-group-addon">Key:</span>
-                        <input type="text" class="form-control">
+                        <span class="input-group-addon">Shift Value:</span>
+                        <input id="caesar-cipher-key" type="text" class="form-control" value="0">
                         <div class="input-group-btn">
-                            <button type="button" class="btn btn-info">
+                            <button id="caesar-cipher-encipher" type="button" class="btn btn-info">
                                 Encipher
                             </button>
-                            <button type="button" class="btn btn-success">
+                            <button id="caesar-cipher-decipher" type="button" class="btn btn-success">
                                 Decipher
+                            </button>
+                            <button id="caesar-cipher-break" type="button" class="btn btn-danger">
+                                Break
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="footer-spacer"></div>
 
         <footer class="footer">
             <div class="container">
@@ -179,6 +190,12 @@
 
         <!-- Theme JavaScript -->
         <script src="/js/agency.js"></script>
+
+        <!-- Cryptanalysis NGram Data -->
+        <script src="/js/ngrams.js"></script>
+
+        <!-- Cryptanalysis JavaScript -->
+        <script src="/js/crypto.js"></script>
     </body>
 
 </html>
