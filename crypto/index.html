@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <!----- Maintenance Notes -----!
-    == Gallery images/videos use lazy loading (https://github.com/ressio/lazy-load-xt).
-       All img tags should have the class "lazy" and "data-src" attributes instead of "src".
-       A backup of the regular tag should be put in a <noscript> block as a backup.
-       
-    == New images should have their size minimized before being added.
-    <-- ------------------------ -->
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Personal website of Jake Chiang">
+        <meta name="description" content="Cryptanalysis Tools">
         <meta name="author" content="Jake Chiang">
 
         <link rel='shortcut icon' type='image/x-icon' href='../img/favicon.ico' />
@@ -45,14 +36,14 @@
         <!--    <link href="vendor/css-hexagon/hexagon.min.css" rel="stylesheet">-->
 
         <!-- Custom Fonts -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!--        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
         <!--    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <!--        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>-->
-        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-        <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+<!--        <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">-->
         <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<!--        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">-->
 
         <!-- Theme CSS -->
         <link href="/css/agency.css" rel="stylesheet">
@@ -103,9 +94,6 @@
         </script>
         <!--<![endif]-->
         <!-- ******************************************************** -->
-
-        <link rel="stylesheet" href="/css/jquery.lazyloadxt.spinner.css">
-        <script src="/vendor/jquery.lazyloadxt.extra.js"></script>
     </head>
 
     <body id="page-top" class="index">
@@ -128,7 +116,7 @@
             <h1 class="page-header blog-header">Cryptanalysis Tools</h1>
             <ul id="toc">
                 <li><a href="#caesar-cipher">Caesar Cipher</a></li>
-                <li><a href="#simple-substitution-cipher">Substitution Cipher</a></li>
+                <li><a href="#simple-sub">Simple Substitution Cipher</a></li>
             </ul>
         </div>
 
@@ -136,14 +124,10 @@
             <h2 id="caesar-cipher" class="section-header blog-section-header page-header">Caesar Cipher</h2>
 
             <div class="row">
-                <div id="caesar-cipher-error" class="alert alert-danger" role="alert" style="display: none;">
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-xs-6">
                     <div class="plaintext-area input-group">
                         <span class="textarea-header">Plaintext</span>
-                        <textarea id="caesar-cipher-plaintext" rows=10 class="form-control"></textarea>
+                        <textarea id="caesar-cipher-plaintext" rows=10 class="form-control">Hello! Try using this text as an example for enciphering/deciphering/breaking, or enter your own.</textarea>
                     </div>
                 </div>
                 <div class="col-xs-6">
@@ -169,6 +153,61 @@
                                 Break
                             </button>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="log-area input-group">
+                        <textarea readonly id="caesar-cipher-log" rows=7 class="form-control">===== Caesar Cipher Log =====</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2 id="simple-sub" class="section-header blog-section-header page-header">Simple Substitution Cipher</h2>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="plaintext-area input-group">
+                        <span class="textarea-header">Plaintext</span>
+                        <textarea id="simple-sub-plaintext" rows=10 class="form-control">Hello! Try using this text as an example for enciphering/deciphering/breaking, or enter your own.</textarea>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="ciphertext-area input-group">
+                        <span class="textarea-header">Ciphertext</span>
+                        <textarea id="simple-sub-ciphertext" rows=10 class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="key-area col-xs-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">Ciphertext Alphabet:</span>
+                        <input id="simple-sub-key" type="text" class="form-control" value="secret">
+                        <div class="input-group-btn">
+                            <button id="simple-sub-make-alphabet" type="button" class="btn btn-warning">
+                                Create Alphabet
+                            </button>
+                            <button id="simple-sub-encipher" type="button" class="btn btn-info">
+                                Encipher
+                            </button>
+                            <button id="simple-sub-decipher" type="button" class="btn btn-success">
+                                Decipher
+                            </button>
+                            <button id="simple-sub-break" type="button" class="btn btn-danger">
+                                Break
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="log-area input-group">
+                        <textarea readonly id="simple-sub-log" rows=7 class="form-control">===== Simple Substitution Cipher Log =====</textarea>
                     </div>
                 </div>
             </div>

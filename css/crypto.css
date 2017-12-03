@@ -1,11 +1,19 @@
 #blog-toc-list {
     width: 100%;
-    margin-bottom: 50px;
+}
+
+.section-header {
+    margin-top: 100px;
 }
 
 textarea {
     width: 100%;
     resize: none;
+    font-family: monospace;
+}
+
+input {
+    font-family: monospace;
 }
 
 .textarea-header {
@@ -22,11 +30,24 @@ textarea {
     width: 100%;
 }
 
-.key-area {
-    margin-top: 20px;
+.log-area {
+    width: 100%;
+    font-family: monospace;
 }
 
-.btn-info, .btn-success, .btn-danger {
+.log-area textarea {
+    resize: vertical;
+    /* Disable wrapping */
+    white-space: pre;
+    overflow: auto;
+}
+
+.key-area {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
