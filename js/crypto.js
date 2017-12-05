@@ -3,7 +3,7 @@
 
     const ALPHABET = "abcdefghijklmnopqrstuvwxyz";
     const NGRAM_SIZE = 4;
-    const RESTART_LIMIT = 100;
+    const RESTART_LIMIT = 200;
 
     var ngramData = {};
     var floor;
