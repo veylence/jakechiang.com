@@ -2,6 +2,7 @@
     "use strict";
 
     var DIRECTORY = "locked-files/";
+    var FILE_LIST = "FILES.txt";
 
     window.onload = function () {
         getFiles();
@@ -16,19 +17,12 @@
     function loadFiles() {
         if (this.readyState === 4 && this.status === 200) {
             showError("");
-            var container = document.implementation.createHTMLDocument().documentElement;
-            container.innerHTML = this.responseText;
-//            var files = container.querySelectorAll("li a");
-            var files = container.querySelectorAll("a");
+            var files = this.responseText.match(/[^\r\n]+/g);
 
             var fileList = document.getElementById("file-list");
             fileList.innerHTML = "";
             // Skip the first 5 elements since they are just the column headings
-            for (var i = 5; i < files.length; i++) {
-                if (files[i].innerHTML === "..") {
-                    continue;
-                }
-
+            for (var i = 0; i < files.length; i++) {
                 /* The following creates: 
                 <div class="list-group-item">
                     <div class="input-group">
@@ -59,7 +53,7 @@
                 inputGroup.appendChild(inputGroupAddon);
 
                 var fileField = document.createElement("span");
-                fileField.innerHTML = files[i].innerHTML;
+                fileField.innerHTML = files[i];
                 fileField.classList.add("file-field");
                 inputGroupAddon.appendChild(fileField);
 
@@ -77,7 +71,7 @@
                 unlockButton.classList.add("unlock-button");
                 unlockButton.classList.add("btn");
                 unlockButton.classList.add("btn-danger");
-                unlockButton.setAttribute("data-filename", files[i].innerHTML);
+                unlockButton.setAttribute("data-filename", files[i]);
                 unlockButton.onclick = decrypt;
                 buttonField.appendChild(unlockButton);
 
@@ -106,14 +100,14 @@
             }
             fixSize();
         } else {
-            showError("There was a problem getting the contents of <code>" + DIRECTORY + "</code>.");
+            showError("There was a problem getting the contents of <code>" + FILE_LIST + "</code>.");
         }
     }
 
     function getFiles() {
         var ajax = new XMLHttpRequest();
         ajax.onload = loadFiles;
-        ajax.open("GET", DIRECTORY, true);
+        ajax.open("GET", FILE_LIST, true);
         ajax.send();
     }
 
@@ -171,6 +165,7 @@
         $("#encrypt-output-area").val(sjcl.encrypt(password, $("#encrypt-input-area").val()));
     }
 
+    // UNUSED UNUSED UNUSED UNUSED UNUSED UNUSED UNUSED UNUSED
     function encryptFile(onLoadCallback) {
         console.log(this);
         console.log(onLoadCallback);
