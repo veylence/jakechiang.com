@@ -108,6 +108,7 @@
         var ajax = new XMLHttpRequest();
         ajax.onload = loadFiles;
         ajax.open("GET", FILE_LIST, true);
+        ajax.withCredentials = true;
         ajax.send();
     }
 
@@ -201,6 +202,7 @@
         $(button).children("span")[0].classList.add("fa-spinner");
 
         ajax.open("GET", DIRECTORY + filename, true);
+        ajax.withCredentials = true;
         ajax.send();
     }
 
