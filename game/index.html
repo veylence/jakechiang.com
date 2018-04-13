@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Code mirror -->
+        <script src="/vendor/codemirror/lib/codemirror.js"></script>
+        <link rel="stylesheet" href="/vendor/codemirror/lib/codemirror.css">
+        <script src="/vendor/codemirror/mode/javascript/javascript.js"></script>
+
+        <!-- jQuery 3 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- CraftyJS -->
+        <script type="text/javascript" src="/vendor/crafty/crafty-min.js"></script>
+        
+        <!-- ROT.js -->
+        <script type="text/javascript" src="/vendor/rot-js/rot.min.js"></script>
+
+        <!-- Game controller -->
+        <script type="text/javascript" src="/js/game.js"></script>
+
+        <link rel="stylesheet" href="/css/game.css">
+    </head>
+
+    <body>
+        <div id="game-container" class="container-fluid">
+            <div id="header-row" class="row">
+                <div style="background-color: lightgray; height: 50px;"></div>
+            </div>
+            <div id="body-row" class="row">
+                <div id="game-column" class="col-md-6">
+                    <div id="game-area" class="text-center"></div>
+                </div>
+
+                <div id="editor-column" class="col-md-6">
+                    <div id="editor-area" class="pull-right">
+                        <textarea id="main-editor" name="main-editor" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
