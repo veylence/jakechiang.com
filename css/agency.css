@@ -919,6 +919,9 @@ video {
     .painting-gallery-image-steps {
         margin-top: 10px;
     }
+    .painting-gallery-image-portrait {
+    	width: 45%;
+    }
     .project-images {
         display: inline;
         float: left;
