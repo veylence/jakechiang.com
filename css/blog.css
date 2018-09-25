@@ -1,98 +1,106 @@
-.navbar-title {
-    color: white;
-    font-size: 30px;
-    font-family: "Raleway", sans-serif;
-    font-weight: normal;
-    letter-spacing: 1px;
-    line-height: 50px;
-    width: 100%;
-    margin-left: 20px;
-    /*    float: none;*/
-    /*    margin: 0 auto;*/
-    /*    position: absolute;*/
-    /*    text-align: center;*/
-    /*    left: 0;*/
+body {
+	text-align: justify;
+	font-size: 13pt;
 }
 
-.navbar-header a:hover,
-.navbar-header a:focus,
-.navbar-header a:active,
-.navbar-header a.active {
-    /* Prevent link hover effects for homepage brand link */
-    color: transparent;
+#header-image {
+	background-image: url("/img/projects/pathfinding/main.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 325px;
+	position: relative;
+	z-index: -999;
 }
 
-#blog-content {
-    width: 60%;
+#header-overlay {
+	position: absolute;
+	background-color: black;
+	opacity: 0.6;
+	width: 100%;
+	height: 100%;
 }
 
-#blog-content p {
-    text-align: justify;
-    font-size: 13pt;
-/*    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-    font-family: "Source Sans Pro", sans-serif;
+#article-title {
+	position: absolute;
+	width: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 10px;
+	text-align: center;
+	padding: 0px 40px;
+	color: white;
+	font-family: "Bebas Neue", Helvetica, Arial, sans-serif;
+	font-size: 40pt;
+	line-height: 40pt;
 }
 
-.back-button {
-    font-size: 12pt;
-    font-weight: bold;
+@media (min-width: 576px) {
+	#article-title {
+		font-size: 50pt;
+		line-height: 50pt;
+	}
 }
 
-.back-button:hover {
-    text-decoration: none;
-    color: #1f6db1;
+#article-metadata {
+	text-align: center;
+	margin-top: 15px;
+	margin-right: 50px;
+	margin-left: 50px;
+	color: #999999;
+	font-size: 11pt;
+	font-style: italic;
+	font-family: "Roboto Slab", sans-serif;
 }
 
-.blog-header {
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-    text-transform: none;
-    margin-top: 30px;
+#article-toc {
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 50px;
+	font-size: 14pt;
+	padding-bottom: 0px;
 }
 
-.blog-section-header {
-    font-family: "Montserrat", sans-serif;
-    text-transform: none;
+#article-toc a:hover {
+	font-weight: bold;
 }
 
-#blog-toc-list {
-    list-style-type: none;
-    width: 60%;
-    margin: 0 auto;
+#article-content {
+	width: 80%;
+	margin-bottom: 100px;
 }
 
-#blog-post-toc-list {
-    font-size: 14pt;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    font-family: "Miriam Libre", sans-serif;
+@media (min-width: 576px) {
+	#article-content {
+		width: 60%;
+	}
 }
 
-.blog-toc-item {
-    font-size: 12pt;
-    line-height: 17pt;
+#article-content p {
+	padding-top: 10px;
+	line-height: 26pt;
 }
 
-.blog-toc-item:before {
-    font-weight: bold;
-    font-family: "Montserrat", sans-serif;
-    content: "\0226B";
-    margin-right: 7px;
+#article-content pre {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 0px;
+	tab-size: 4;
 }
 
-.info-footer {
-    font-style: italic;
-    color: #777777;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 100px;
+.article-section-header {
+	border-bottom: 1px solid #dddddd;
+	margin-top: 50px;
+	margin-bottom: 10px;
 }
 
-.img-centered {
-    margin-top: 30px;
-    margin-bottom: 30px;
+.article-section-header h2 {
+	font-family: "Montserrat";
+	font-weight: bold;
 }
 
-.row .img-centered {
-    margin: 0;
+.row {
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
+

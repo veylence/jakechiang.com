@@ -1,240 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Cryptanalysis Tools">
-        <meta name="author" content="Jake Chiang">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cryptanalysis Tools">
+    <meta name="author" content="Jake Chiang">
 
-        <link rel='shortcut icon' type='image/x-icon' href='../img/favicon.ico' />
+    <link rel='shortcut icon' type='image/x-icon' href='/img/favicon.ico' />
 
-        <title>Cryptanalysis Tools</title>
+    <title>Cryptanalysis Tools</title>
 
-        <script>
-            (function(i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function() {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <!-- Theme CSS -->
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/blog.css" rel="stylesheet">
+    <link href="/css/crypto.css" rel="stylesheet">
 
-            ga('create', 'UA-101951927-1', 'auto');
-            ga('send', 'pageview');
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <link href="/font/BebasNeue.otf" rel="stylesheet" type="application/font-woff">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
+</head>
 
-        </script>
+<body id="page-top" class="index">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <span class="navbar-brand" href="#">
+            <a href="/">
+                <img id="navbar-logo" draggable="false" src="/img/logo.png">
+            </a>
+        </span>
+    </nav>
 
-        <!-- Bootstrap Core CSS -->
-        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <div id="page-intro-section" class="container">
+        <div class="article-section-header">
+            <h1>Cryptanalysis Tools</h1>
+        </div>
+        <ul id="toc">
+            <li><a href="#caesar-cipher">Caesar Cipher</a></li>
+            <li><a href="#simple-sub">Simple Substitution Cipher</a></li>
+        </ul>
+    </div>
 
-        <!-- CSS Hexagon -->
-        <!--    <link href="vendor/css-hexagon/hexagon.min.css" rel="stylesheet">-->
-
-        <!-- Custom Fonts -->
-<!--        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
-        <!--    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <!--        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>-->
-        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
-<!--        <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">-->
-        <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:400,700" rel="stylesheet">
-<!--        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">-->
-
-        <!-- Theme CSS -->
-        <link href="/css/agency.css" rel="stylesheet">
-        <link href="/css/blog.css" rel="stylesheet">
-        <link href="/css/crypto.css" rel="stylesheet">
-
-        <!-- Sticky Footer -->
-        <link href="/css/sticky-footer.css" rel="stylesheet">
-
-        <!--[if lt IE 9]>
-
-    <![endif]-->
-
-        <!--
-       Test if Internet Explorer is being used. If it is, and its
-       version is <9, jQuery 1.x is used. If it isn't, or IE version
-       9+ is in use, jQuery 2.x is loaded instead.
-       
-       In both cases jQuery is first attempted to be loaded from
-       Google's CDN. If, for some reason, it cannot be accessed,
-       it is loaded from this site's own copy.
-       
-       Additional note: The "| (!IE)" statement for loading jQuery
-       2.x isn't necessary, but cleaner.
-    -->
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!-- ******************************************************** -->
-        <!--[if lt IE 9]>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script>
-            if (!window.jQuery) {
-                document.write('<script src="/js/jquery-1.12.4.min.js"><\/script>');
-            }   
-        </script>
-
-        <script src="/vendor/html5shiv/html5shiv.min.js></script>
-        <script src="/vendor/respond/respond.min.js"></script>
-        <![endif]-->
-
-        <!--[if gte IE 9] | (!IE)><!-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script>
-            if (!window.jQuery) {
-                document.write('<script src="/js/jquery-2.2.4.min.js"><\/script>');
-            }
-
-        </script>
-        <!--<![endif]-->
-        <!-- ******************************************************** -->
-    </head>
-
-    <body id="page-top" class="index">
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-custom navbar-custom-static">
-            <div class="container">
-                <div class="navbar-header page-scroll">
-                    <a href="/index.html">
-                        <span id="navbar-link" class="navbar-brand page-scroll" href="/index.html">
-                            <img id="logo" src="/img/JCLogo.png" alt="JC Logo">
-                        </span>
-                        <!-- <span class="navbar-title">Jake Chiang</span> -->
-                    </a>
-                </div>
-            </div>
-        </nav>
-
-        <div id="blog-content" class="container">
-            <h1 class="page-header blog-header">Cryptanalysis Tools</h1>
-            <ul id="toc">
-                <li><a href="#caesar-cipher">Caesar Cipher</a></li>
-                <li><a href="#simple-sub">Simple Substitution Cipher</a></li>
-            </ul>
+    <div class="container">
+        <div class="article-section-header">
+            <h2 id="caesar-cipher">Caesar Cipher</h2>
         </div>
 
+        <div class="row">
+            <div class="col-6">
+                <span class="textarea-header">Plaintext</span>
+                <div class="plaintext-area input-group">
+                    <textarea id="caesar-cipher-plaintext" rows=10 class="form-control">Hello! Try using this text as an example for enciphering/deciphering/breaking, or enter your own. The Caesar cipher works by shifting the alphabet by a certain amount so that each letter in the plaintext becomes another letter a fixed number of places down.</textarea>
+                </div>
+            </div>
+            <div class="col-6">
+                <span class="textarea-header">Ciphertext</span>
+                <div class="ciphertext-area input-group">
+                    <textarea id="caesar-cipher-ciphertext" rows=10 class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="key-area col-12">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Shift Value:</span>
+                    </div>
+                    <input id="caesar-cipher-key" type="text" class="form-control" value="0">
+                    <div class="input-group-append">
+                        <button id="caesar-cipher-encipher" type="button" class="btn btn-info">
+                            Encipher
+                        </button>
+                        <button id="caesar-cipher-decipher" type="button" class="btn btn-success">
+                            Decipher
+                        </button>
+                        <button id="caesar-cipher-break" type="button" class="btn btn-danger">
+                            Break
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="log-area input-group">
+                    <textarea readonly id="caesar-cipher-log" rows=7 class="form-control">===== Caesar Cipher Log =====</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="article-section-header">
+            <h2 id="simple-sub">Simple Substitution Cipher</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <span class="textarea-header">Plaintext</span>
+                <div class="plaintext-area input-group">
+                    <textarea id="simple-sub-plaintext" rows=10 class="form-control">Hello! Try using this text as an example for enciphering/deciphering/breaking, or enter your own. In simple substitution ciphers, each letter in the plaintext alphabet is assigned a single unique letter that it will be replaced with in the ciphertext.</textarea>
+                </div>
+            </div>
+            <div class="col-6">
+                <span class="textarea-header">Ciphertext</span>
+                <div class="ciphertext-area input-group">
+                    <textarea id="simple-sub-ciphertext" rows=10 class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="key-area col-12">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Ciphertext Alphabet:</span>
+                    </div>
+                    <input id="simple-sub-key" type="text" class="form-control" value="secret">
+                    <div class="input-group-append">
+                        <button id="simple-sub-make-alphabet" type="button" class="btn btn-warning">
+                            Create Alphabet
+                        </button>
+                        <button id="simple-sub-encipher" type="button" class="btn btn-info">
+                            Encipher
+                        </button>
+                        <button id="simple-sub-decipher" type="button" class="btn btn-success">
+                            Decipher
+                        </button>
+                        <button id="simple-sub-break" type="button" class="btn btn-danger">
+                            Break
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="log-area input-group">
+                    <textarea readonly id="simple-sub-log" rows=7 class="form-control">===== Simple Substitution Cipher Log =====</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-spacer"></div>
+
+    <footer class="footer">
         <div class="container">
-            <h2 id="caesar-cipher" class="section-header blog-section-header page-header">Caesar Cipher</h2>
-
-            <div class="row">
-                <div class="col-xs-6">
-                    <div class="plaintext-area input-group">
-                        <span class="textarea-header">Plaintext</span>
-                        <textarea id="caesar-cipher-plaintext" rows=10 class="form-control">Hello! Try using this text as an example for enciphering/deciphering/breaking, or enter your own. The Caesar cipher works by shifting the alphabet by a certain amount so that each letter in the plaintext becomes another letter a fixed number of places down.</textarea>
-                    </div>
-                </div>
-                <div class="col-xs-6">
-                    <div class="ciphertext-area input-group">
-                        <span class="textarea-header">Ciphertext</span>
-                        <textarea id="caesar-cipher-ciphertext" rows=10 class="form-control"></textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="key-area col-xs-12">
-                    <div class="input-group">
-                        <span class="input-group-addon">Shift Value:</span>
-                        <input id="caesar-cipher-key" type="text" class="form-control" value="0">
-                        <div class="input-group-btn">
-                            <button id="caesar-cipher-encipher" type="button" class="btn btn-info">
-                                Encipher
-                            </button>
-                            <button id="caesar-cipher-decipher" type="button" class="btn btn-success">
-                                Decipher
-                            </button>
-                            <button id="caesar-cipher-break" type="button" class="btn btn-danger">
-                                Break
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="log-area input-group">
-                        <textarea readonly id="caesar-cipher-log" rows=7 class="form-control">===== Caesar Cipher Log =====</textarea>
-                    </div>
-                </div>
-            </div>
+            <span class="copyright text-very-muted">Copyright &copy; Jake Chiang 2018</span>
         </div>
+    </footer>
 
-        <div class="container">
-            <h2 id="simple-sub" class="section-header blog-section-header page-header">Simple Substitution Cipher</h2>
+    <script type="text/javascript" src="/vendor/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/vendor/popper.min.js"></script>
+    <script type="text/javascript" src="/vendor/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
 
-            <div class="row">
-                <div class="col-xs-6">
-                    <div class="plaintext-area input-group">
-                        <span class="textarea-header">Plaintext</span>
-                        <textarea id="simple-sub-plaintext" rows=10 class="form-control">Hello! Try using this text as an example for enciphering/deciphering/breaking, or enter your own. In simple substitution ciphers, each letter in the plaintext alphabet is assigned a single unique letter that it will be replaced with in the ciphertext.</textarea>
-                    </div>
-                </div>
-                <div class="col-xs-6">
-                    <div class="ciphertext-area input-group">
-                        <span class="textarea-header">Ciphertext</span>
-                        <textarea id="simple-sub-ciphertext" rows=10 class="form-control"></textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="key-area col-xs-12">
-                    <div class="input-group">
-                        <span class="input-group-addon">Ciphertext Alphabet:</span>
-                        <input id="simple-sub-key" type="text" class="form-control" value="secret">
-                        <div class="input-group-btn">
-                            <button id="simple-sub-make-alphabet" type="button" class="btn btn-warning">
-                                Create Alphabet
-                            </button>
-                            <button id="simple-sub-encipher" type="button" class="btn btn-info">
-                                Encipher
-                            </button>
-                            <button id="simple-sub-decipher" type="button" class="btn btn-success">
-                                Decipher
-                            </button>
-                            <button id="simple-sub-break" type="button" class="btn btn-danger">
-                                Break
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="log-area input-group">
-                        <textarea readonly id="simple-sub-log" rows=7 class="form-control">===== Simple Substitution Cipher Log =====</textarea>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Cryptanalysis NGram Data -->
+    <script type="text/javascript" src="/js/ngrams.js"></script>
 
-        <div class="footer-spacer"></div>
-
-        <footer class="footer">
-            <div class="container">
-                <span class="copyright text-very-muted">Copyright &copy; Jake Chiang 2018</span>
-            </div>
-        </footer>
-
-        <!-- Bootstrap Core JavaScript -->
-        <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-        <!-- Plugin JavaScript -->
-        <script src="/https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-        <!-- Theme JavaScript -->
-        <script src="/js/agency.js"></script>
-
-        <!-- Cryptanalysis NGram Data -->
-        <script src="/js/ngrams.js"></script>
-
-        <!-- Cryptanalysis JavaScript -->
-        <script src="/js/crypto.js"></script>
-    </body>
-
+    <!-- Cryptanalysis JavaScript -->
+    <script type="text/javascript" src="/js/crypto.js"></script>
+</body>
 </html>

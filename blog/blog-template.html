@@ -1,214 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Writings of Jake Chiang">
+	<meta name="author" content="Jake Chiang">
 
-    <!----- Maintenance Notes -----!
-    == Gallery images/videos use lazy loading (https://github.com/ressio/lazy-load-xt).
-       All img tags should have the class "lazy" and "data-src" attributes instead of "src".
-       A backup of the regular tag should be put in a <noscript> block as a backup.
-       
-    == New images should have their size minimized before being added.
-    <------ ----------------- ----->
+	<link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Blog Page">
-        <meta name="author" content="Jake Chiang">
+	<title>Blog-Template</title>
 
-        <link rel='shortcut icon' type='image/x-icon' href='/img/favicon.ico' />
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/blog.css">
 
-        <title>Blog Template Page</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+	<link href="/font/BebasNeue.otf" rel="stylesheet" type="application/font-woff">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<span class="navbar-brand" href="#">
+			<a href="/">
+				<img id="navbar-logo" draggable="false" src="/img/logo.png">
+			</a>
+		</span>
+	</nav>
 
-        <script>
-            (function(i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function() {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+	<div id="header-image">
+		<div id="header-overlay"></div>
+		<div id="article-title">
+			Template title goes here
+		</div>
+	</div>
 
-            ga('create', 'UA-101951927-1', 'auto');
-            ga('send', 'pageview');
+	<div id="article-metadata">
+		Published January 1, 1900.
+		<br/> Last updated January 1, 1900.
+	</div>
 
-        </script>
+	<section id="article-toc">
+		<ol>
+			<li><a href="#sec-introduction">Introduction</a></li>
+			<li><a href="#sec-body">Body</a></li>
+			<li><a href="#sec-conclusion">Conclusion</a></li>
+			<li><a href="#">Asdf qwerty foobar bazqux aeiou</a></li>
+		</ol>
+	</section>
 
-        <!-- Bootstrap Core CSS -->
-        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<div id="article-content" class="container">
+		<div class="article-section-header">
+			<h2 id="sec-introduction">Introduction</h2>
+		</div>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<div class="row">
+			<div class="col text-center">
+				<img class="img-fluid lazy" width="300px" height="300px" data-src="/img/placeholder.png" alt="Placeholder">
+				<noscript><img class="img-fluid" width="300px" height="300px" src="/img/placeholder.png" alt="Placeholder"></noscript>
+			</div>
+		</div>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
 
-        <!-- CSS Hexagon -->
-        <!--    <link href="vendor/css-hexagon/hexagon.min.css" rel="stylesheet">-->
+		<div class="article-section-header">
+			<h2 id="sec-body">Body</h2>
+		</div>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
 
-        <!-- Custom Fonts -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <!--    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-        <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<pre><code>#include &lt;iostream&gt;
 
-        <!-- Theme CSS -->
-        <link href="/css/agency.css" rel="stylesheet">
-        <link href="/css/blog.css" rel="stylesheet">
-
-        <!-- Sticky Footer -->
-        <link href="/css/sticky-footer.css" rel="stylesheet">
-
-        <!--[if lt IE 9]>
-
-    <![endif]-->
-
-        <!--
-       Test if Internet Explorer is being used. If it is, and its
-       version is <9, jQuery 1.x is used. If it isn't, or IE version
-       9+ is in use, jQuery 2.x is loaded instead.
-       
-       In both cases jQuery is first attempted to be loaded from
-       Google's CDN. If, for some reason, it cannot be accessed,
-       it is loaded from this site's own copy.
-       
-       Additional note: The "| (!IE)" statement for loading jQuery
-       2.x isn't necessary, but cleaner.
-    -->
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!-- ******************************************************** -->
-        <!--[if lt IE 9]>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script>
-            if (!window.jQuery) {
-                document.write('<script src="/js/jquery-1.12.4.min.js"><\/script>');
-            }   
-        </script>
-
-        <script src="/vendor/html5shiv/html5shiv.min.js></script>
-        <script src="/vendor/respond/respond.min.js"></script>
-        <![endif]-->
-
-        <!--[if gte IE 9] | (!IE)><!-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script>
-            if (!window.jQuery) {
-                document.write('<script src="/js/jquery-2.2.4.min.js"><\/script>');
-            }
-
-        </script>
-        <!--<![endif]-->
-        <!-- ******************************************************** -->
-
-        <link rel="stylesheet" href="/css/jquery.lazyloadxt.spinner.css">
-        <script src="/vendor/lazy-load/jquery.lazyloadxt.extra.js"></script>
-    </head>
-
-    <body id="page-top" class="index">
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-custom navbar-custom-static">
-            <div class="container">
-                <div class="navbar-header page-scroll">
-                    <a href="/index.html">
-                        <span id="navbar-link" class="navbar-brand page-scroll" href="/index.html">
-                            <img id="logo" src="/img/JCLogo.png" alt="JC Logo">
-                        </span>
-<!--                        <span class="navbar-title">Jake Chiang</span>-->
-                    </a>
-                </div>
-            </div>
-        </nav>
-
-
-        <div id="blog-content" class="container">
-            <div class="blog-header">
-                <a class="back-button" href="/blog/">&#9664; Back</a>
-                <h1 class="page-header blog-header">Title Goes Here</h1>
-            </div>
-
-            <ol id="blog-post-toc-list">
-                <li><a href="#section-intro">Introduction</a></li>
-                <li><a href="#section-body">Body</a></li>
-                <li><a href="#section-conclusion">Conclusion</a></li>
-            </ol>
-
-            <h2 id="section-intro" class="page-header blog-section-header">Introduction</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <img class="img-centered img-responsive" src="https://via.placeholder.com/400x250" alt="Placeholder Image">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <br/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <br/>
-
-            <h2 id="section-body" class="page-header blog-section-header">Body</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <img class="img-centered img-responsive" src="https://via.placeholder.com/700x550" alt="Placeholder Image">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <pre><code>#include &lt;iostream>
-            
 int main() {
-    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
-    return 0;
+	std::cout << "Hello, World!" << std::endl;
+	return 0;
 }</code></pre>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <div class="row">
-                <div class="col-xs-6">
-                    <pre><code>public static void main(String[] args) {
-    for(int i = 0; i &lt; 1024; i++) {
-        long x = 0;
-        for(int j = 1024; j >= 0; j--) {
-            if(i * i == i * j) {
-                x += j;
-            }
-        }
-        if(i % j == j / i) {
-            System.out.print(i + " ");
-            System.out.print(j + " ");
-            System.out.println(x);
-        }
-    }
-}</code></pre>
-                </div>
-                <div class="col-xs-6">
-                    <img class="img-centered img-responsive" src="https://via.placeholder.com/500x500" alt="Placeholder Image">
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-            <h2 id="section-conclusion" class="page-header blog-section-header">Conclusion</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<div class="row">
+			<div class="col align-self-center">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			</div>
+			<div class="col text-center">
+				<img class="img-fluid lazy" width="150px" height="150px" data-src="/img/placeholder.png" alt="Placeholder">
+				<noscript><img class="img-fluid" width="150px" height="150px" src="/img/placeholder.png" alt="Placeholder"></noscript>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col align-self-center">
+				Lorem ipsum dolor sit amet.
+			</div>
+			<div class="col text-center">
+				<img class="img-fluid lazy" width="150px" height="150px" data-src="/img/placeholder.png" alt="Placeholder">
+				<noscript><img class="img-fluid" width="150px" height="150px" src="/img/placeholder.png" alt="Placeholder"></noscript>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col align-self-center">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+			</div>
+			<div class="col text-center">
+				<img class="img-fluid lazy" width="150px" height="150px" data-src="/img/placeholder.png" alt="Placeholder">
+				<noscript><img class="img-fluid" width="150px" height="150px" src="/img/placeholder.png" alt="Placeholder"></noscript>
+			</div>
+		</div>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
 
-        <!--        <div class="info-footer">Posted January 1st, 2000</div>-->
-        <br/>
-        <br/>
-        <br/>
-        <footer class="footer">
-            <div class="container">
-                <span class="copyright text-very-muted">Copyright &copy; Jake Chiang 2018</span>
-            </div>
-        </footer>
+		<div class="article-section-header">
+			<h2 id="sec-conclusion">Conclusion</h2>
+		</div>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col text-center">
+					<span class="copyright">&copy; 2016-2018 Jake Chiang</span>
+				</div>
+			</div>
+		</div>
+	</footer>
 
-        <!-- Plugin JavaScript -->
-        <script src="/https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-        <!-- highlightjs (Syntax highlighting) -->
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>
-            hljs.initHighlightingOnLoad();
+	<script type="text/javascript" src="/vendor/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/vendor/popper.min.js"></script>
+	<script type="text/javascript" src="/vendor/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="/vendor/lazy-load/jquery.lazyloadxt.extra.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
 
-        </script>
+	<script>
+		$.extend($.lazyLoadXT, {
+			edgeY: 500,
+		});
+	</script>
 
-        <!-- Theme JavaScript -->
-        <script src="/js/agency.js"></script>
-    </body>
+	<!-- highlight.js -->
+	<link rel="stylesheet" href="/vendor/highlight/styles/default.css">
+	<script src="/vendor/highlight/highlight.pack.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
 
+
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+</body>
 </html>

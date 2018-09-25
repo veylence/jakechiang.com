@@ -26,14 +26,16 @@
                 /* The following creates: 
                 <div class="list-group-item">
                     <div class="input-group">
-                        <span class="input-group-addon"><span class="file-field"></span></span>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><span class="file-field"></span></span>
+                        </div>
                         <input type="text" class="form-control">
-                        <div class="input-group-btn">
+                        <div class="input-group-append">
                             <button type="button" class="btn btn-danger">
-                                <span class="fa fa-lock fa-lg fa-fw"></span>
+                                <span class="fas fa-lock fa-fw"></span>
                             </button>
-                            <button type="button" class="btn btn-danger">
-                                <span class="fa fa-external-link fa-lg fa-fw"></span>
+                            <button type="button" class="btn btn-primary">
+                                <span class="fas fa-external-link-alt fa-fw"></span>
                             </button>
                         </div>
                     </div>
@@ -48,14 +50,18 @@
                 inputGroup.classList.add("input-group");
                 listGroupItem.appendChild(inputGroup);
 
-                var inputGroupAddon = document.createElement("span");
-                inputGroupAddon.classList.add("input-group-addon");
-                inputGroup.appendChild(inputGroupAddon);
+                var inputGroupPrepend = document.createElement("div");
+                inputGroupPrepend.classList.add("input-group-prepend");
+                inputGroup.appendChild(inputGroupPrepend);
+
+                var inputGroupText = document.createElement("span");
+                inputGroupText.classList.add("input-group-text");
+                inputGroupPrepend.appendChild(inputGroupText);
 
                 var fileField = document.createElement("span");
                 fileField.innerHTML = files[i];
                 fileField.classList.add("file-field");
-                inputGroupAddon.appendChild(fileField);
+                inputGroupText.appendChild(fileField);
 
                 var passwordField = document.createElement("input");
                 passwordField.type = "password";
@@ -63,7 +69,7 @@
                 inputGroup.appendChild(passwordField);
 
                 var buttonField = document.createElement("div");
-                buttonField.classList.add("input-group-btn");
+                buttonField.classList.add("input-group-append");
                 inputGroup.appendChild(buttonField);
 
                 var unlockButton = document.createElement("button");
@@ -76,9 +82,8 @@
                 buttonField.appendChild(unlockButton);
 
                 var unlockButtonIcon = document.createElement("span");
-                unlockButtonIcon.classList.add("fa");
+                unlockButtonIcon.classList.add("fas");
                 unlockButtonIcon.classList.add("fa-lock");
-                unlockButtonIcon.classList.add("fa-lg");
                 unlockButtonIcon.classList.add("fa-fw");
                 unlockButton.appendChild(unlockButtonIcon);
 
@@ -92,9 +97,8 @@
                 buttonField.appendChild(openButton);
 
                 var openButtonIcon = document.createElement("span");
-                openButtonIcon.classList.add("fa");
-                openButtonIcon.classList.add("fa-external-link");
-                openButtonIcon.classList.add("fa-lg");
+                openButtonIcon.classList.add("fas");
+                openButtonIcon.classList.add("fa-external-link-alt");
                 openButtonIcon.classList.add("fa-fw");
                 openButton.appendChild(openButtonIcon);
             }

@@ -1,128 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Public Encrypted Directory">
-        <meta name="author" content="Jake Chiang">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Public Encrypted Directory">
+    <meta name="author" content="Jake Chiang">
 
-        <!-- Bootstrap Core CSS -->
-        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/locked.css">
 
-        <!-- Fonts -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
+</head>
 
-        <link rel="stylesheet" href="../css/locked.css">
-        
-        <title>Public Encrypted Directory</title>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>Public Encrypted Directory</h1>
+        </div>
+        <p>Enter the password for a file and press the lock button to unlock. If the file decrypts successfully, the second button will then take you to the decrypted contents.</p>
 
-        <!--
-       Test if Internet Explorer is being used. If it is, and its
-       version is <9, jQuery 1.x is used. If it isn't, or IE version
-       9+ is in use, jQuery 2.x is loaded instead.
-       
-       In both cases jQuery is first attempted to be loaded from
-       Google's CDN. If, for some reason, it cannot be accessed,
-       it is loaded from this site's own copy.
-       
-       Additional note: The "| (!IE)" statement for loading jQuery
-       2.x isn't necessary, but cleaner.
-    -->
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!-- ******************************************************** -->
-        <!--[if lt IE 9]>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script>
-            if (!window.jQuery) {
-                document.write('<script src="../js/jquery-1.12.4.min.js"><\/script>');
-            }   
-        </script>
+        <h3 class="text-center">Choose File</h3>
+        <div id="error-message" class="alert alert-danger" role="alert" style="display: none"></div>
 
-        <script src="../vendor/html5shiv/html5shiv.min.js></script>
-        <script src="../vendor/respond/respond.min.js"></script>
-        <![endif]-->
+        <div id="file-list" class="list-group">
+            <!-- Files are added here -->
+        </div>
 
-        <!--[if gte IE 9] | (!IE)><!-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script>
-            if (!window.jQuery) {
-                document.write('<script src="../js/jquery-2.2.4.min.js"><\/script>');
-            }
+        <br/>
+        <br/>
+        <br/>
 
-        </script>
-        <!--<![endif]-->
-        <!-- ******************************************************** -->
-    </head>
+        <h3 class="text-center">Encrypt New File</h3>
+        <div class="text-center">
+            <p>Use this area to encrypt data into a format that can be read by this interface.</p>
+        </div>
 
-    <body>
-        <div class="container">
-            <h1 class="page-header">Public Encrypted Directory</h1>
-            <p>Enter the password for a file and press the lock button to unlock. If the file decrypts successfully, the second button will then take you to the decrypted contents.</p>
+        <br/>
 
-            <h3 class="text-center">Choose File</h3>
-            <div id="error-message" class="alert alert-danger" role="alert" style="display: none"></div>
-
-            <div class="row">
-                <div class="col-md-offset-2 col-md-8">
-                    <div id="file-list" class="list-group">
-                        <!-- Files are added here -->
-                    </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="encrypt-input-area"><strong>Encryption input:</strong></label>
+                    <textarea name="encrypt-input-area" id="encrypt-input-area" rows="7" class="form-control"></textarea>
                 </div>
             </div>
-
-
-            <h3 class="text-center">Encrypt New File</h3>
-            <div class="text-center">
-                <p>Use this area to encrypt data into a format that can be read by this interface.</p>
-            </div>
-
-            <br/>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="encrypt-input-area">Encryption input:</label>
-                        <textarea name="encrypt-input-area" id="encrypt-input-area" rows="7" class="form-control"></textarea>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="encrypt-output-area">Encryption output:</label>
-                        <textarea name="encrypt-output-area" id="encrypt-output-area" rows="7" class="form-control"></textarea>
-                    </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="encrypt-output-area"><strong>Encryption output:</strong></label>
+                    <textarea name="encrypt-output-area" id="encrypt-output-area" rows="7" class="form-control"></textarea>
                 </div>
             </div>
+        </div>
 
 <!--
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-12">
                     <label class="btn btn-primary">
                         Browse&hellip;
                         <input id="file-browser-button" type="file" style="display: none;">
                     </label>
                 </div>
             </div>
--->
+        -->
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="input-group">
-                        <span class="input-group-addon">Password:</span>
-                        <input type="password" id="encrypt-password" class="form-control">
-                        <div class="input-group-btn">
-                            <button type="button" id="encrypt-button" class="btn btn-primary">
-                                Encrypt
-                            </button>
-                        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Password:</span>
+                    </div>
+                    <input type="password" id="encrypt-password" class="form-control">
+                    <div class="input-group-append">
+                        <button type="button" id="encrypt-button" class="btn btn-primary">
+                            Encrypt
+                        </button>
                     </div>
                 </div>
             </div>
+        </div>
             <!--
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-6">
                     <div class="input-group">
                         <strong>Key Size: </strong>
 
@@ -135,25 +96,30 @@
                     </div>
                 </div>
             </div>
--->
+        -->
 
-            <br/>
+        <br/>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="alert alert-warning" role="alert">
-                        <strong>Crypto Warning!</strong> If you're looking to implement a service similar to this, don't attempt to replicate what's being done here security wise. <a href="https://rdist.root.org/2010/11/29/final-post-on-javascript-crypto/">Javascript cryptography is dangerous</a>, and very specific uses that are safe, such as here, should not be used as example.
-                    </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-warning" role="alert">
+                    <strong>Crypto Warning!</strong> If you're looking to implement a service similar to this, don't attempt to replicate what's being done here security wise. <a href="https://rdist.root.org/2010/11/29/final-post-on-javascript-crypto/" target="_blank">Javascript cryptography is dangerous</a>, and very specific uses that are safe, such as here, should not be used as example.
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="/vendor/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/vendor/popper.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="/vendor/bootstrap.bundle.min.js"></script>
 
-        <script src="../vendor/sjcl.js"></script>
+    <!-- Stanford Javascript Crypto Library -->
+    <script src="/vendor/sjcl.js"></script>
 
-        <script src="../js/locked.js"></script>
-    </body>
+    <!-- Custom Page Script -->
+    <script src="/js/locked.js"></script>
+</body>
 
 </html>

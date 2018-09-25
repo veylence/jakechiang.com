@@ -1,4 +1,4 @@
-(function () {
+(function ($) {
     "use strict";
 
     const ALPHABET = "abcdefghijklmnopqrstuvwxyz";
@@ -9,7 +9,7 @@
     var floor;
     var countSum;
 
-    document.onready = function () {
+    $(document).ready(function () {
         loadNGrams();
 
         document.getElementById("caesar-cipher-encipher").onclick = caesarCipherEncipher;
@@ -20,7 +20,7 @@
         document.getElementById("simple-sub-decipher").onclick = simpleSubDecipher;
         document.getElementById("simple-sub-break").onclick = simpleSubBreak;
         document.getElementById("simple-sub-make-alphabet").onclick = simpleSubMakeAlphabet;
-    }
+    });
 
     function loadNGrams() {
         countSum = 0;
@@ -304,4 +304,4 @@
         }
         return str;
     }
-})();
+})(jQuery);
